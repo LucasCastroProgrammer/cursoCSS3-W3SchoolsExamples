@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Sintaxe e seletores em CSS</title>
+	<style>
+		/*Abaixo, um elemento padrão com seletor, utilizando o próprio nome da tag que se quer estilizar.*/
+		p{
+			color:red;
+			text-align: center;
+		}
+
+		/*
+		O seletor id usa o atributo id de um elemento HTML para selecionar algo específico. O id de um elemento deve ser único na página, então este seletor deve selecionar um único elemento.
+		
+		Para selecionar um elemento com um id específico, escreva um #, seguido do nome do id do elemento.
+		*/
+
+		/*nomes de id não podem começar com números*/
+		#para1{
+			text-align: center;
+			color: green;
+		}
+
+		/*
+		O seletor classe seleciona elementos com um atributo específico de classe
+		
+		Para selecionar elementos com uma classe especifica, escreva . seguido do nome da classe.
+		*/
+		
+		/*Neste exemplo temos todos os elementos com a classe selecionada sendo alterados.*/
+		.center{
+			text-align: center;
+			color: blue;
+		}
+
+		/*
+		Neste exemplo temos uma modificação sendo feita somente em um elemento específico que está recebendo as classes configuradas nos elementos
+			h1.center{
+				font-size: 30px;
+			}
+		*/
+
+		/* Nomes de classes também não podem começar com números */
+		.large{
+			font-size: 300%;
+		}
+
+		/*Pode-se usar vários seletores ao mesmo tempo para aplicar estilos*/
+		h3, h4, h5{
+			text-align: center;
+			color: purple;
+		}
+
+		/*Comentários em CSS: UMA LINHA*/
+		/*
+			Várias
+			Linhas
+			De
+			Comentário
+		*/
+	</style>
+</head>
+<body>
+	<!-- 
+		Uma configuração básica de uma regra em CSS consiste em um seletor e um bloco de declarações.
+	-->
+
+	<p>Hello World!</p>
+	<p>Estes parágrafos estão estilizados com CSS.</p>
+
+	<p id="para1">Este parágrafo está estilizado por id.</p>
+
+	<h1 class="center">Classe</h1>
+	<p class="center">Este bloco de informações está estilizado com uma classe.</p>
+
+	<h2>Exemplo de múltiplas classes:</h2>
+	<p class="center large">Este paragrafo está sendo estilizado por múltiplas classes.</p>
+
+	<h3>Exemplo</h3>
+	<h4>Básico</h4>
+	<h5>do lucas para agrupamento de tags no CSS</h5>
+
+</body>
+</html>

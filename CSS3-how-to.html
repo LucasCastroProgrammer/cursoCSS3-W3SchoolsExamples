@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<!-- Um jeito de inserir CSS é usando um link fazendo referência para arquivos externos -->
+	<link rel="stylesheet" href="#.css">
+	<!-- Outra forma é usar a tag style, e inserir as declarações dentro. É recomendado seu uso para uma página com somente 1 único estilo. -->
+	<style>
+		body{
+			background-color: linen;
+		}
+
+		h1{
+			color: maroon;
+			/*Obs: sempre deixe o valor e a unidade da propriedade juntos. */
+			margin-left: 40px;
+		}
+	</style>
+</head>
+<body>
+	<!-- Outra forma de trabalhar com css é dentro do próprio elemento que se quer estilizar. -->
+	<h4 style="color: blue;margin-left: 30px;">Este é um cabeçalho.</h4>
+	<!-- O estilo CSS será aplicado sempre pela última declaração. Se dois elementos foram selecionados, porém com estilos diferentes, a última declaração valerá, já que sobrescreve a primeira. Exemplo:
+		h1{
+			color: blue;
+		}
+
+		h1{
+			color: orange;
+		}
+		O laranja será aplicado. Essa mesma regra vale para conflitos entre estilos internos e arquivos externos com valores de propriedade conflitantes para os elementos.
+	-->
+
+	<!-- Ordem de cascata
+		No CSS, a ordem de prioridade para aplicação de estilos é a seguinte:
+		-> Estilo em linha; - Maior prioridade
+		-> Folhas de estilo internas e externas (na seção heading);
+		-> Padrão do navegador; - Menor prioridade
+	-->
+</body>
+</html>

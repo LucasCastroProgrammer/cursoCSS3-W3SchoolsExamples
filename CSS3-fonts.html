@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Fontes em CSS</title>
+	<style>
+		p.serif{
+			font-family:"Times New Roman", "Times", serif;
+		}
+		p.sansserif{
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		p.normal{
+			font-style: normal;
+			font-weight: normal;
+		}
+		p.italic{
+			font-style: italic;
+		}
+		p.oblique{
+			font-style: oblique
+		}
+
+		/*Configurando o font-size com pixels você pode ter total controle no tamanho do texto. Usando pixels você pode usar o zoom para refatorar a página inteira.*/
+		h2{
+			font-size: 40px;
+		}
+		h3{
+			font-size: 30px;
+		}
+		h4{
+			font-size: 14px;
+		}
+
+		/*
+			Para permitir usuários a redimensionar o texto no menu do navegador, muitos desenvolvedores usam em ao invés de pixel.
+			1em é igual a 16 pixels
+			Exemplos:
+			body{
+				Com o código abaixo no body, aí sim, o texto poderá ser visto sem problemas mesmo com o redimensionamento de página
+				font-size: 100%;
+			}
+			h1{
+				font-size: 2.5em; 40px/16=2.5em
+			}
+
+			h2{
+				font-size: 1.875em; 30px/16=1.875em
+			}
+
+			p{
+				font-size: 0.875em; 14px/16=0.875em
+			}
+		*/		
+		p.light{
+			font-weight: lighter;
+		}
+		p.thick{
+			font-weight: bold;
+		}
+		p.thicker{
+			font-weight: 900;
+		}
+
+		p.ex1{
+			font-variant: normal;
+		}
+		p.ex2{
+			font-variant: small-caps;
+		}
+	</style>
+</head>
+<body>
+	<!-- As propriedades de fontes em CSS definem o tipo de fonte, destaque, tamanho e o estilo do texto. -->
+	<h1>CSS font-family</h1>
+	<p class="serif">This is a paragraph, shown in the Times New Roman font.</p>
+	<p class="sansserif">This is a paragraph, shown in the Arial font.</p>
+
+	<!-- A propriedade font-style é a mais usada para especificar texto itálico. Há três propriedades: normal, italic e oblique. -->
+	<p class="normal">This is a paragraph in normal style.</p>
+	<p class="italic">This is a paragraph in italic style.</p>
+	<p class="oblique">This is a paragraph in oblique style.</p>
+
+	<!-- O font-size configura o tamanho do texto.
+	Há dois tipos de tamanho:
+	-> Absoluto:
+		- Configura o texto para um tamanho específico;
+		- não permite o usuário mudar o tamanho do texto em todos os navegadores (Ruim para questões de acessibilidade).
+		- Tamanhos absolutos são úteis quando o tamanho físico de saída é desconhecido.
+	-> Relativo:
+		- Configura o tamanho relativo no contorno dos elementos.
+		- Permite um usuário mudar o tamanho da fonte do navegador.
+	-->
+
+	<h2>This is heading 1</h2>
+	<h3>This is heading 2</h3>
+	<h4>This is heading 3</h4>
+
+	<p class="normal">This is a paragraph.</p>
+	<p class="light">This is a paragraph.</p>
+	<p class="thick">This is a paragraph.</p>
+	<p class="thicker">This is a paragraph.</p>
+
+	<h1 style="font-size:5vw;">Responsive Text</h1>
+	<p style="font-size: 5vw;">Resize the browser window to see how the text size scales.</p>
+	<p style="font-size: 5vw;">Use the "vw" unit when sizing the text. 10vw will set the size to 10% of the viewport width.</p>
+
+	<p>Viewport é o tamanho da janela do navegador. 1vw = 1% da largura do viewport. Se o viewport tem 50cm de largura, 1vw será igual a 0.5cm</p>
+
+	<!-- A propriedade font-variant especifica se há ou não a necessidade do texto ser exibido em fontes small-caps. Em fontes small-caps todas as letras minúsculas são convertidas para maiúsculas. Porém, as letras convertidas aparecem em um tamanho de fonte menor do que as maiúsculas originais no texto. -->
+
+	<p class="ex1">Meu nome é Lucas Castro</p>
+	<p class="ex2">Meu nome é Lucas Castro</p>
+</body>
+</html>

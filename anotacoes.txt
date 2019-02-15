@@ -56,3 +56,10 @@ border-top-color	Sets the color of the top border
 border-top-style	Sets the style of the top border
 border-top-width	Sets the width of the top border
 border-width	Sets the width of the four borders
+
+-> Todas as propriedades Margin em CSS:
+margin	A shorthand property for setting the margin properties in one declaration
+margin-bottom	Sets the bottom margin of an element
+margin-left	Sets the left margin of an element
+margin-right	Sets the right margin of an element
+margin-top	Sets the top margin of an element

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Espaçamento interno em CSS</title>
+	<style>
+		div{
+			padding: 70px;
+			border: 1px solid #4CAF50;
+		}
+
+		/*A propriedade padding é usada para gerar espaços dentro do conteúdo do elemento, dentro de suas bordas definidas. Com CSS, você tem total controle sobre o espaçamento interno. Há propriedades de padding para cada lado do elemento: (top, right, bottom e left)*/
+
+		/*
+		Todos os elementos de padding podem ter os seguintes valores:
+		length: especifica um padding em px, pt, cm, entre outros;
+		% - especifica um padding em % de largura do elemento.
+		inherit - especifica que o padding deve herdar de elemento pai
+		*/
+
+		.one{
+			border: 1px solid black;
+			background-color: lightblue;
+			padding-top: 50px;
+			padding-right: 30px;
+			padding-bottom: 50px;
+			padding-left: 80px;
+		}
+
+		.one-value{
+			border: 1px solid black;
+			background-color: lightblue;
+			padding: 25px;
+		}
+		.two-values{
+			border: 1px solid black;
+			background-color: lightblue;
+			padding: 25px 50px;
+		}
+		.three-values{
+			border: 1px solid black;
+			background-color: lightblue;
+			padding: 25px 50px 75px;	
+		}
+		.four-values{
+			border: 1px solid black;
+			background-color: lightblue;
+			padding: 25px 50px 75px 100px;
+		}
+
+		.exemplo-box{
+			width: 300px;
+			padding: 25px;
+			/*Sem o box-sizing: border-box; a largura total deste bloco fica em 250!*/
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<div>Este elemento tem um espaçamento interno de 70px.</div>
+
+	<h2>Usando propriedades de padding individuais</h2>
+	<div class="one">
+		Este elemento div tem no topo 50px de padding, na direita 30px, abaixo 50px e na esquerda 80.
+	</div>
+
+	<div class="one-value">Alguma coisa.</div>
+	<div class="two-values">Alguma coisa.</div>
+	<div class="three-values">Alguma coisa.</div>
+	<div class="four-values">Alguma coisa</div>
+
+	<div class="exemplo-box">
+		Alguma coisa.
+	</div>
+</body>
+</html>

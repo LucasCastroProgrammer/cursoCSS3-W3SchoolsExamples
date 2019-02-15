@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Margens em CSS</title>
+	<style>
+		div{
+			margin: 70px;
+			border: 1px solid #4CAF50;	
+		}
+	
+		/*
+			Margens são usadas para criar espaços em volta de elementos fora da alguma área de borda definida.
+			Com CSS, você pode ter controle sobre as margens. Há propriedades para configurar a margem de cada lado do elemento (top, bottom e left).
+			Todas as margens podem ter os seguintes valores:
+			-> Auto: o navegador calcula a margem;
+			-> length: especifica a margem em px, pt, cm, entre outros;
+			-> % - especifica a margem em % de largura do elemento contido;
+			-> inherit:especifica que a margem deve herdar de elemento pai ;
+			-> Valores negativos são aceitos.
+		*/
+
+		.one{
+			border: 1px solid black;
+			margin-top: 100px;
+			margin-bottom: 100px;
+			margin-right: 150px;
+			margin-left: 80px;
+			background-color: lightblue; 
+		}
+
+		p.four-values{
+			margin: 25px 50px 75px 100px;
+		}
+		p.three-values{
+			margin: 25px 50px 75px;
+		}
+		p.two-values{
+			margin: 25px 50px;
+		}
+		p.one-value{
+			margin: 25px;
+		}
+		div.central-proper{
+			width: 300px;
+			margin: auto;
+			border: 1px solid red;
+		}
+		p.ex1{
+			border: inherit;
+		}
+		h1{
+			margin: 0 0 50px 0;
+		}
+		h3{
+			margin: 20px 0 0 0;
+		}
+	</style>
+</head>
+<body>
+	<div>Este elemento tem uma margem de 70px.</div>
+	
+	<h2>Usando propriedades individuais</h2>
+	<div class="one">Este elemento tem margem de topo de 100px, uma margem direita de 150px, uma margem abaixo de 100px, e uma margem esquerda de 80px.</div>
+
+	<p class="four-values">4 valores</p>
+	<p class="three-values">3 valores</p>
+	<p class="two-values">2 valores</p>
+	<p class="one-value">1 valor</p>
+
+	<h2>Usando a valor auto</h2>
+	<div class="central-proper">
+		Esta div estará horizontalmente centralizada, por causa do valor de margin auto;
+		<p class="ex1">Este parágrafo tem uma herança de seu parente.</p>
+	</div>
+
+	<h2>Margens em junção</h2>
+	<p>Margens podem entrar em junção quando possuem valores iguais ao maior de duas margens.</p>
+	<p>Só acontece com top e bottom, nunca com left e right.</p>
+
+	<h1>Cabeçalho 1</h1>
+	<h3>Cabeçalho 3</h3>
+
+</body>
+</html>

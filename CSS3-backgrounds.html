@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Backgrounds em CSS</title>
+	<style>
+		body{
+			background-color: lightblue;
+		}
+
+		h1{
+			background-color: green;
+		}
+
+		div{
+			background-color: purple;
+		}
+
+		p{
+			background-color: yellow;
+		}
+
+		/*Por padrão, o background-image repete uma imagem tanto horizontalmente quanto verticalmente. Algumas imagens devem se repetir somente horizontamente e outra verticalmente, ou elas irão parecer estranhas.*/
+		#bck-img{
+			background-image: url("sintaxe-css.gif");
+			/* 
+			background-repeat: repeat-x; Neste caso, a imagem se repetiria de forma horizontal. 
+			background-repeat: repeat-y; Neste caso, a imagem se repetiria de forma vertical.
+			background-repeat: no-repeat; Neste caso a imagem será mostrada somente uma vez.
+			*/
+		}
+
+		#bck-img2{
+			background-image: url("sintaxe-css.gif");
+			background-repeat: no-repeat;
+			/*No caso abaixo, estamos mudando a posição da imagem de fundo para a direita e no topo.*/
+			background-position: right top;
+			/*Pode-se especificar a posição da imagem de fundo para que seja fixa. Não vai scrollar com o resto da página.*/
+			background-attachment: fixed;
+		}
+
+		/* Consegue-se abreviar as declarações de valores da propriedade background da seguinte forma:
+		EXEMPLO: background: #ffffff url("img_tree.png") no-repeat right top;
+		*/
+
+	</style>
+</head>
+<body>
+	<!-- As propriedades de background do CSS são usadas para definir efeitos de fundo nos elementos. São propriedades backgrounds do CSS:
+	-> background-color;
+	-> background-image;
+	-> background-repeat;
+	-> background-attachment;
+	-> background-position;
+	-->
+
+	<h2>Hello World!</h2>
+	<p>Esta página tem uma cor azul de fundo.</p>
+
+	<h1>Exemplo de background-color!</h1>
+	<div>
+		Este é um texto dentro do elemento div
+		<p>Este é um parágrafo com sua própria cor de fundo.</p>
+		Ainda estamos dentro do div
+	</div>
+
+	<div id="bck-img">
+		Este div tem uma imagem de fundo
+	</div>
+
+	<div id="bck-img2">
+		<h1>Hello World!</h1>
+		<p>W3Schools background image example.</p>
+		<p>The background image is only showing once, but it is disturbing the reader!</p>
+	</div>
+
+	<!-- Para usarmos a forma abreviada do background, a ordem de inserção é dessa forma:
+		-> background-color;
+		-> background-image;
+		-> background-repeat;
+		-> background-attachment;
+		-> background-position;
+	Não importa se uma das propriedades estiver faltando, contanto que todas estejam em ordem.
+	-->
+
+</body>
+</html>

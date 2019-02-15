@@ -101,3 +101,19 @@ unicode-bidi	Used together with the direction property to set or return whether 
 vertical-align	Sets the vertical alignment of an element
 white-space	Specifies how white-space inside an element is handled
 word-spacing	Increases or decreases the space between words in a text
+
+-> Famílias de fonte em CSS:
+Serif	Times New Roman
+Georgia	Serif fonts have small lines at the ends on some characters
+Sans-serif	Arial
+Verdana	"Sans" means without - these fonts do not have the lines at the ends of characters
+Monospace	Courier New
+Lucida Console	All monospace characters have the same width
+
+-> Todas as propriedades de fontes em CSS
+font	Sets all the font properties in one declaration
+font-family	Specifies the font family for text
+font-size	Specifies the font size of text
+font-style	Specifies the font style for text
+font-variant	Specifies whether or not a text should be displayed in a small-caps font
+font-weight	Specifies the weight of a font

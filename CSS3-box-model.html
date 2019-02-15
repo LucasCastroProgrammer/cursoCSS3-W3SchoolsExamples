@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Box-model em CSS</title>
+	<style>
+		/*O box-model é composto de:
+		-> Conteúdo: onde textos e imagens aparecem;
+		-> Padding: limpa a área em volta do conteúdo. O padding é transparente;
+		-> Border: uma borda envolta o padding e o conteúdo;
+		-> Margin:limpa a área fora da borda. A margem é transparente; */
+		/*O box-model nos permite adicionar borda sobre os elementos e definir espaços entre outros elementos.*/
+		.one{
+			width: 300px;
+			border: 25px solid green;
+			padding: 25px;
+			margin: 25px;
+		}
+
+		/*
+			div{
+				width: 320px;
+				padding: 10px;
+				border: 5px solid gray;
+				margin: 0;				
+			}
+			O width se refere somente a largura do conteúdo, se quisermos saber a largura completa, temos que somar também paddings, bordas e margens. No exemplo acima, a largura total será de 350px. O Mesmo vale para altura.
+		*/
+	</style>
+</head>
+<body>
+	<h2>Demonstração do box-model</h2>
+	<div class="one">This text is the actual content of the box. We have added a 25px padding, 25px margin and a 25px green border. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+</body>
+</html>

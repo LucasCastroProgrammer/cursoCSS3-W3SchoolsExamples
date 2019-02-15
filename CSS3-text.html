@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Texto em CSS</title>
+	<style>
+		div.one{
+			border: 1px solid gray;
+			padding: 8px;
+		}
+
+		.one > h1{
+			text-align: center;
+			text-transform: uppercase;
+			color: #4CAF50;
+		}
+
+		.one > p{
+			/*a propriedade text-indent é usada para especificar a indentação da primeira linha do texto*/
+			text-indent: 50px;
+			text-align: justify;
+			/*A propriedade letter-spacing é usada para especificar o espaço entre os caracteres em um texto.
+			-> Pode-se decrementar o valor com seguinte exemplo:
+			letter-spacing: -3px;
+			*/
+			letter-spacing: 3px;
+			/* A propriedade line-height é usada para especificar o espaço entre linhas:
+			line-height: 0.8;//small
+			*/
+			/*
+			A propriedade direction é usada para mudar a direção do texto para um elemento.
+			direction: rtl;
+			*/
+			/*
+			A propriedade word-spacing é usada para especificar o espaço entre as palavras em um texto.
+			word-spacing: 10px;
+			word-spacing: -5px;
+			*/
+			/*
+			A propriedade text-shadow adiciona sombras para o texto. O primeiro valor é da posição horizontal da sombra, o segundo é a vertical e o terceiro é a cor da sombra
+			*/
+		}
+
+		p > a{
+			text-decoration: none;
+			color: #008CBA;
+		}
+
+		a{
+			/*Usado para remover qualquer decoração do texto, como um sublinhado, por exemplo.*/
+			text-decoration: none;
+		}
+
+		.c1{
+			color: green;
+		}
+
+		.p1{
+			color: blue;
+		}
+
+		.c2{
+			text-align: center;
+		}
+		.c3{
+			text-align: left;
+		}
+		.c4{
+			text-align: right;
+		}
+		.txt-alg{
+			border: 1px solid black;
+			padding: 10px;
+			width: 200px;
+			height: 200px;
+			text-align: justify;
+		}
+
+		/*Os outros tipos de text-decoration abaixo adicionam decoração ao mesmo*/
+		h3{
+			text-decoration: overline;
+		}
+		h4{
+			text-decoration: line-through;
+		}
+		h5{
+			text-decoration: underline;
+		}
+
+		/*text-transform é usado para especificar letras maíuscula e minuscula no texto*/
+		p.uppercase{
+			text-transform: uppercase;
+		}
+		p.lowercase{
+			text-transform: lowercase;
+		}
+		p.capitalize{
+			text-transform: capitalize;
+		}
+	</style>
+</head>
+<body>
+	<div class="one">
+		<h1>text formatting</h1>
+		<p>This text is styled with some of the text formatting properties. The heading uses the text-align, text-transform, and color properties.
+	  	The paragraph is indented, aligned, and the space between characters is specified. The underline is removed from this colored <a href="#" target="_blank">"Tenta aí!"</a> link.</p>
+  	</div>
+
+  	<!-- 
+  	A propriedade de cor é usada para configurar a cor do texto. A cor pode ser especificada por:
+	  	-> Cor de nome: red;
+		-> Valor HEX: #ff0000;
+		-> Valor RGB: (255,0,0);
+		-> Entre outros.
+  	-->
+
+  	<h1 class="c1">This is heading 1</h1>
+  	<p class="p1">This is an ordinary paragraph. Notice that this text is blue. The default text color for a page is defined in the body selector.</p>
+
+  	<!-- O alinhamento do texto ocorre ao usar a propriedade text-align -->
+  	<h1>Alinhamento de texto</h1>
+  	<h2 class="c2">Cabeçalho - Central</h2>
+  	<h2 class="c3">Cabeçalho - Esquerda</h2>
+  	<h2 class="c4">Cabeçalho - Direita</h2>
+
+  	<!-- Para deixar um texto justificado, utilize o valor de text-align: justify; -->
+  	<h2>Exemplo de text-align</h2>
+  	<div class="txt-alg">
+	  	<p>
+	  		In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'
+	  	</p>
+  	</div>
+
+  	<h3>Olá</h3>
+  	<h4>Tudo</h4>
+  	<h5>Bem</h5>
+
+  	<p class="uppercase">This is some text.</p>
+  	<p class="lowercase">This is some text.</p>
+  	<p class="capitalize">This is some text.</p>
+
+</body>
+</html>

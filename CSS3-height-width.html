@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Altura e largura em CSS</title>
+	<style>
+		div{
+			width: 100%;
+			border: 1px solid #4CAF50;
+		}
+
+		/*As propriedades height e width são usadas para configurar altura e largura de um elemento.
+		Pode ser configurada com o valor auto (de automático, ou seja, o navegador vai calcular a altura e a largura ou ser especificada em comprimento, px, cm, entre outros.)*/
+
+		.one{
+			height: 200px;
+			width: 50%;
+			background-color: powderblue;
+		}
+		.two{
+			height: 100px;
+			width: 500px;
+			background-color: powderblue;
+		}
+		.three{
+			/*Limita o tamanho máximo de largura para 500px;*/
+			max-width: 500px;
+			height: 100px;
+			background-color: powderblue;
+		}
+		/*As propriedades height e o width não incluem paddings, bordas ou margens. Eles configuram a altura e largura da área dentro do padding, border, e elementos de margem.*/
+	</style>
+</head>
+<body>
+	<div>Este elemento tem uma largura de 100%.</div>
+	
+	<p>Este elemento div tem uma altura de 200px e largura de 50%</p>
+	<div class="one"></div>
+	<br>
+	<p>Este elemento div tem uma altura de 100px e largura de 500px;</p>
+	<div class="two"></div>
+	<br>
+	<p>Este elemento div tem uma altura de 100px e um max-width de 500px</p>
+	<div class="three"></div>
+</body>
+</html>

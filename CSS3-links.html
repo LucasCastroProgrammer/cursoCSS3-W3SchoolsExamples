@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Links em CSS</title>
+	<style>
+		a{
+			color: hotpink;
+		}
+
+		/*Links não-visitado*/
+		a:link{
+			color:red;
+			/*A propriedade text-decoration é mais usada para remover sublinhados dos links*/
+			text-decoration: none;
+			/*A propriedade Background-color pode ser usada para especificar a cor de fundo dos links*/
+			background-color: yellow;
+		}
+
+		/*Link visitado*/
+		a:visited{
+			color:green;
+			text-decoration: none;
+			background-color: cyan;
+		}
+
+		/*Mouse acima do link*/
+		/*O hover deve vir depois do link e visited*/
+		a:hover{
+			color:hotpink;
+			text-decoration: underline;
+			background-color: lightgreen;
+		}
+
+		/*Link selecionado (no momento do click)*/
+		/*O active deve vir depois do hover*/
+		a:active{
+			color:blue;
+			text-decoration: underline;
+			background-color: hotpink;
+		}
+
+		#btn:link, #btn:visited{
+			background-color: #f44336;
+			color:white;
+			padding: 14px 25px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+		}
+
+		#btn:hover, #btn:active{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<!-- Com CSS, links podem ser estilizados de diferentes formas -->
+	<p><b><a href="#" target="_blank">Este é um link</a></b></p>
+
+	<!-- Este exemplo demonstra algo mais avançado, onde nós combinamos diversas propriedades de CSS para mostrar links como caixas/botões -->
+	<h2>Link button</h2>
+	<p>Um link estilizado como um botão:</p>
+	<a href="#" target="_blank" id="btn">Este é um link</a>
+</body>
+</html>

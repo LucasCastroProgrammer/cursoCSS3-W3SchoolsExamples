@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Tabelas em CSS</title>
+	<style>
+		#customers{
+			font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width:100%;
+		}
+
+		#customers td, #customers th{
+			border: 1px solid #ddd;
+			padding: 8px;
+		}
+		
+		#customers tr:nth-child(even){
+			background-color: #f2f2f2;
+		}
+
+		#customers tr:hover{
+			background-color: #ddd;
+		}
+
+		#customers th{
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: left;
+			background-color: #4CAF50;
+			color: white;
+		}
+
+		/*<!-- Bordas em tabelas: Para especificar bordas em tabelas, use a propriedade border.*/
+		#one, #one th, #one td{
+			border: 1px solid black;
+		}
+
+		/*A propriedade border-collapse configura que a borda das tabelas devem ser colapsadas em uma única borda*/
+		#two{
+			border-collapse: collapse;
+		}
+
+		#two, #two td, #two th{
+			border: 1px solid black;
+		}
+		/* Se você somente quer uma borda em volta da tabela, somente especifique a propriedade border da tabela */
+		table{
+			border-collapse: collapse;
+			border:1px solid black;
+		}
+
+		/*Largura e altura de tabelas são definidas por width e height.*/
+		#four, #four td, #four th{
+			border: 1px solid black;
+		}
+		#four{
+			border-collapse: collapse;
+			width: 100%;
+		}
+		#four th{
+			height: 50px;
+			/*Alinhamento horizontal: a propriedade text-align configura o alinhamento horizontal do conteúdo. Por padrão, o conteúdo de th é alinhado central, enquanto o conteúdo de th são alinhados a esquerda.*/
+			text-align: left;
+		}
+		/*A propriedade vertical-align configura o alinhamento vertical do conteúdo. Por padrão, o alinhamento vertical do conteúdo na tabela é no meio.*/
+		#four td{
+			height: 50px;
+			vertical-align: bottom;
+		}
+		/*Para controlar o espaço entre a borda e o conteúdo da tabela, use o padding nos elementos td e th.*/
+		#four th, #four td{
+			padding: 15px;
+			text-align: left;
+		}
+		/*Para adicionar divisões horizontais, adicione a propriedade border-bottom no th e no td*/
+		#four th, #four td{
+			border-bottom: 1px solid #ddd;
+		}
+
+		/*Use o seletor :hover no tr para mudar a cor quando o mouse passar acima das informações da tabela*/
+		#four tr:hover{
+			background-color: #f5f5f5;
+		}
+		/*Para configurar um estilo zebra nas tabelas, use o seletor nth-child e adicione o background-color apra todos os elementos ímpares (ou pares) das linhas da tabela.*/
+		#four tr:nth-child(even){
+			background-color: #f2f2f2;
+		}
+		/*Podemos adicionar cores de fundo e de texto para os elementos th*/
+		#four th{
+			background-color: #4CAF50;
+			color:white;
+		}
+	</style>
+</head>
+<body>
+	<!-- Tabelas são uma ótima forma de praticarmos CSS -->
+	<table id="customers">
+		<tr>
+			<th>Empresa</th>
+			<th>Contato</th>
+			<th>País</th>
+		</tr>
+		<tr>
+			<td>Alfreds Futterkiste</td>
+			<td>Maria Anders</td>
+			<td>Germany</td>
+		</tr>
+		<tr>
+			<td>Berglunds snabbköp</td>
+			<td>Christina Berglund</td>
+			<td>Sweden</td>
+		</tr>
+		<tr>
+			<td>Centro comercial Moctezuma</td>
+			<td>Francisco Chang</td>
+			<td>Mexico</td>
+		</tr>
+		<tr>
+			<td>Ernst Handel</td>
+			<td>Roland Mendel</td>
+			<td>Austria</td>
+		</tr>
+		<tr>
+			<td>Island Trading</td>
+			<td>Helen Bennett</td>
+			<td>UK</td>
+		</tr>
+		<tr>
+			<td>Königlich Essen</td>
+			<td>Philip Cramer</td>
+			<td>Germany</td>
+		</tr>
+		<tr>
+			<td>Laughing Bacchus Winecellars</td>
+			<td>Yoshi Tannamuri</td>
+			<td>Canada</td>
+		</tr>
+		<tr>
+			<td>Magazzini Alimentari Riuniti</td>
+			<td>Giovanni Rovelli</td>
+			<td>Italy</td>
+		</tr>
+		<tr>
+			<td>North/South</td>
+			<td>Simon Crowther</td>
+			<td>UK</td>
+		</tr>
+		<tr>
+			<td>Paris spécialités</td>
+			<td>Marie Bertrand</td>
+			<td>France</td>
+		</tr>
+	</table>
+
+	<h2>Adicionando uma borda na tabela</h2>
+	<table id="one">
+		<tr>
+			<th>Primeito nome</th>
+			<th>Último nome</th>
+		</tr>
+		<tr>
+			<td>Peter</td>
+			<td>Griffin</td>
+		</tr>
+		<tr>
+			<td>Lois</td>
+			<td>Griffin</td>
+		</tr>
+	</table>
+
+	<h2>As bordas colapsadas</h2>
+	<table id="two">
+		<tr>
+			<th>Primeiro nome</th>
+			<th>Último nome</th>
+		</tr>
+		<tr>
+			<td>Peter</td>
+			<td>Griffin</td>
+		</tr>
+		<tr>
+			<td>Lois</td>
+			<td>Griffin</td>
+		</tr>
+	</table>
+
+	<h2>Bordas em volta somente da tabela</h2>
+	<table id="three">
+		<tr>
+			<th>Primeiro nome</th>
+			<th>Último nome</th>
+		</tr>
+		<tr>
+			<td>Peter</td>
+			<td>Griffin</td>
+		</tr>
+		<tr>
+			<td>Lois</td>
+			<td>Griffin</td>
+		</tr>
+	</table>
+
+	<h2>Altura e largura de tabelas por CSS</h2>
+	<table id="four">
+		<tr>
+			<th>Primeiro nome</th>
+			<th>Último nome</th>
+			<th>Economias</th>
+		</tr>
+		<tr>
+			<td>Peter</td>
+			<td>Griffin</td>
+			<td>$100</td>
+		</tr>
+		<tr>
+			<td>Lois</td>
+			<td>Griffin</td>
+			<td>$150</td>
+		</tr>
+		<tr>
+			<td>Joe</td>
+			<td>Swanson</td>
+			<td>$300</td>
+		</tr>
+		<tr>
+			<td>Cleveland</td>
+			<td>Brown</td>
+			<td>$250</td>
+		</tr>
+	</table>
+
+	<!-- Uma tabela responsiva irá mostrar um scroll bar horizontal se a tela for muito pequena para o conteúdo completo. Para uma tabela responsiva, adicione a propriedade overflow-x:auto -->
+	<div id="five" style="overflow-x:auto;">
+		<table>
+			<tr>
+				<th>Primeiro nome</th>
+				<th>Último nome</th>
+				<th>Points</th>
+				<th>Points</th>
+				<th>Points</th>
+				<th>Points</th>
+				<th>Points</th>
+				<th>Points</th>
+				<th>Points</th>
+				<th>Points</th>
+				<th>Points</th>
+				<th>Points</th>
+			</tr>
+			<tr>
+				<td>Jill</td>
+				<td>Smith</td>
+				<td>50</td>
+				<td>50</td>
+				<td>50</td>
+				<td>50</td>
+				<td>50</td>
+				<td>50</td>
+				<td>50</td>
+				<td>50</td>
+				<td>50</td>
+				<td>50</td>
+			</tr>
+			<tr>
+				<td>Eve</td>
+				<td>Jackson</td>
+				<td>94</td>
+				<td>94</td>
+				<td>94</td>
+				<td>94</td>
+				<td>94</td>
+				<td>94</td>
+				<td>94</td>
+				<td>94</td>
+				<td>94</td>
+				<td>94</td>
+			</tr>
+			<tr>
+				<td>Adam</td>
+				<td>Johnson</td>
+				<td>67</td>
+				<td>67</td>
+				<td>67</td>
+				<td>67</td>
+				<td>67</td>
+				<td>67</td>
+				<td>67</td>
+				<td>67</td>
+				<td>67</td>
+				<td>67</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

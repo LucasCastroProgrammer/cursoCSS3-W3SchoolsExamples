@@ -4,8 +4,24 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Largura e altura de layout em CSS</title>
+	<style>
+		div.ex1{
+			width:500px;
+			margin: auto;
+			border: 3px solid #73AD21;
+		}
+		div.ex2{
+			max-width: 500px;
+			margin: auto;
+			border: 3px solid #73AD21;
+		}
+	</style>
 </head>
 <body>
-	
+	<!-- Ao configurar o width para uma elemento block-level preine-se do conteúdo transpassar o limite estabelecido. Depois, você pode configurar as margens para auto para centralizar o elemento inserido no container. O elemento irá pegar o width configurado, e o espaço restante será espremido igualitariamente entre as duas margens.-->
+
+	<!-- Usando o max-width, na mesma situação descrita acima, você provará a adptabilidade do seu conteúdo até em pequenas janelas. Isto é importante pensando em usabilidade em dispositivos pequenos.  -->
+	<div class="ex1">Este elemento div tem 500px</div>
+	<div class="ex2">Este elemento div tem largura máxima de 500px</div>
 </body>
 </html>

@@ -117,3 +117,9 @@ font-size	Specifies the font size of text
 font-style	Specifies the font style for text
 font-variant	Specifies whether or not a text should be displayed in a small-caps font
 font-weight	Specifies the weight of a font
+
+-> Todas as propriedades de listas em CSS
+list-style	Sets all the properties for a list in one declaration
+list-style-image	Specifies an image as the list-item marker
+list-style-position	Specifies the position of the list-item markers (bullet points)
+list-style-type	Specifies the type of list-item marker

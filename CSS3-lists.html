@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Listas em CSS</title>
+	<style>
+		ul.a{
+			list-style-type: circle;
+		}
+		ul.b{
+			list-style-type: square;
+		}
+		ol.c{
+			list-style-type: upper-roman;
+		}
+		ol.d{
+			list-style-type: lower-alpha;
+		}
+
+		.one{
+			list-style-position: outside;
+		}
+		.two{
+			list-style-position: inside;
+		}
+
+		.demo{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.three{
+			background:#ff9999;
+			padding: 20px;
+		}
+		.four{
+			background:#3399ff;
+			padding: 20px;
+		}
+
+		.three > li{
+			background: #ffe5e5;
+			padding: 5px;
+			margin-left: 35px;
+		}
+		.four > li{
+			background: #cce5ff;
+			margin: 5px; 
+		}
+	</style>
+</head>
+<body>
+	<!-- Em HTML, há dois principais tipos de lista:
+	-> Lista não-ordenada;
+	-> Lista ordenada;
+	As propriedades de lista do CSS nos habilita a:
+	-> Configurar diferentes marcadores de lista para uma lista ordenada;
+	-> Configurar diferentes marcadores de lista para uma lista não-ordenada;
+	-> Configurar uma imagem como um marcador de lista;
+	-> Adicionar cor de fundo para a lista e os itens dela.
+	-->
+
+	<!-- A propriedade list-style-type especifica o tipo de marcador do item de lista -->
+	<p>Exemplos de lista não-ordenada:</p>
+	<ul class="a">
+		<li>Café</li>
+		<li>Chá</li>
+		<li>Coca-Cola</li>
+	</ul>
+
+	<ul class="b">
+		<li>Café</li>
+		<li>Chá</li>
+		<li>Coca-Cola</li>
+	</ul>
+
+	<p>Exemplos de listas ordenadas</p>
+	<ol class="c">
+		<li>Café</li>
+		<li>Chá</li>
+		<li>Coca-Cola</li>
+	</ol>
+
+	<ol class="d">
+		<li>Café</li>
+		<li>Chá</li>
+		<li>Coca-Cola</li>
+	</ol>
+
+	<!-- A propriedade list-style-image especifica uma imagem como um marcador de lista
+		ul{
+			list-style-image:url('sqpurple.gif');
+		}
+	-->
+
+	<!--
+		A propriedade list-style-position especifica a posição do marcador de lista:
+		-> O list-style-position:outside significa que o ponto das marcações ficará fora do item de lista. O começo de cada item de lista será alinhado verticalmente. Este é o padrão.
+		-> O list-style-position:inside significa que o ponto dos itens será dentro do item de lista. Como uma parte do item da lista, será parte do texto e empurra o texto do começo.
+	-->
+	<h1>A propriedade list-style-position</h1>
+	<h2>Outside</h2>
+	<ul class="one">
+		<li>Coffee - A brewed drink prepared from roasted coffee beans, which are the seeds of berries from the Coffea plant</li>
+		<li>Tea - An aromatic beverage commonly prepared by pouring hot or boiling water over cured leaves of the Camellia sinensis, an evergreen shrub (bush) native to Asia</li>
+		<li>Coca Cola - A carbonated soft drink produced by The Coca-Cola Company. The drink's name refers to two of its original ingredients, which were kola nuts (a source of caffeine) and coca leaves</li>
+	</ul>
+
+	<h2>Inside</h2>
+	<ul class="two">
+		<li>Coffee - A brewed drink prepared from roasted coffee beans, which are the seeds of berries from the Coffea plant</li>
+		<li>Tea - An aromatic beverage commonly prepared by pouring hot or boiling water over cured leaves of the Camellia sinensis, an evergreen shrub (bush) native to Asia</li>
+		<li>Coca Cola - A carbonated soft drink produced by The Coca-Cola Company. The drink's name refers to two of its original ingredients, which were kola nuts (a source of caffeine) and coca leaves</li>
+	</ul>
+
+	<!-- A propriedade list-style-type:none pode ser usada também para remover as marcações. Note que a lista tem uma margem e padding como default. Para remover isso, adicionamos as seguintes configurações no CSS:-->
+	<p>Removendo marcações, margens e padding!</p>
+	<ul class="demo">
+		<li>Café</li>
+		<li>Chá</li>
+		<li>Coca-Cola</li>
+	</ul>
+
+	<!-- A propriedade list-style é uma forma abreviada. É usada para configurar todas as prorpiedades de lista em uma declaração.  
+		ul{
+			list-style: square inside url("sqpurple.gif");
+		}
+
+		A ordem das propriedades deve ser:
+		list-style-type;
+		list-style-position;
+		list-style-image;
+	-->
+
+	<!-- Estilizando listas com cores:
+		Nós também podemos estilizar com cores. Qualquer coisa que for adicionada ao ul ou ol, afetará a lista inteira, enquanto no li, será somente os itens de lista.
+	-->
+	<h2>Estilizando listas com cores</h2>
+	<ol class="three">
+		<li>Café</li>
+		<li>Chá</li>
+		<li>Coca-Cola</li>
+	</ol>
+
+	<ul class="four">
+		<li>Café</li>
+		<li>Chá</li>
+		<li>Coca-Cola</li>
+	</ul>
+</body>
+</html>

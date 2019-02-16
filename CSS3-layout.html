@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Layout em CSS</title>
+	<style>
+		#one li{
+			display: inline;
+		}
+		span{
+			display: block;
+		}
+		/*
+		a{ Mostra links como elementos block
+			display: block
+		}*/
+
+		h1.hidden{
+			display: none;
+		}
+
+		h3.hidden{
+			visibility: hidden;
+		}
+	</style>
+</head>
+<body>
+	
+	<!-- A propriedade display é mais importante propriedade CSS para controlar o layout. -->
+	
+	<!-- A propriedade display especifica se/como um elemento é mostrado.
+	Todo elemento HTML tem um valor de display padrão dependendo de que tipo de elemento é este. O valor padrão de display para a maioria dos elementos é block e inline.
+	-->
+	
+	<!-- Elementos block-level: Um elemento block-level sempre começa em uma nova linha e pega a largura total disponível. Exemplos de elementos block-level:
+	-> <div>;
+	-> <h1> - <h6>;
+	-> <p>;
+	-> <form>;
+	-> <header>;
+	-> <footer>;
+	-> <section>;
+	-->
+
+	<!-- Elementos inline: um elemento inline não começa em uma nova linha e somente pega a largura necessária. Exemplos de elementos inline.
+	-> <span>;
+	-> <a>;
+	-> <img>;
+	-->
+
+	<!-- Sobrescrevendo o valor de display padrão. -->
+	<h2>Mostrar uma lista de links como um menu horizontal:</h2>
+	<ul id="one">
+		<li><a href="#">HTML</a></li>
+		<li><a href="#">CSS</a></li>
+		<li><a href="#">Javascript</a></li>
+	</ul>
+
+	<h2>Elementos inline com valor block</h2>
+	<span>Uma propriedade display com um valor de "block" resulta em</span>
+	<span>uma quebra de linha entre os elementos</span>
+
+	<h2>Mostra links como elementos block</h2>
+	<a href="#">HTML</a>
+	<a href="#">CSS</a>
+	<a href="#">Javascript</a>
+
+	<!-- Para esconder um elemento, configura-se o display para none. O elemento será escondido e a página será mostrada como se o elemento não estivesse lá. -->
+
+	<h1>Este é um cabeçalho visivel</h1>
+	<h1 class="hidden">Este é um cabeçalho escondido.</h1>
+
+	<!-- A propriedade visibility:hidden  também esconde um elemento. -->
+	<h3>Este é um cabeçalho visível</h3>
+	<h3 class="hidden">Este não é um cabeçalho visível</h3>	
+
+</body>
+</html>

@@ -131,3 +131,8 @@ border-spacing	Specifies the distance between the borders of adjacent cells
 caption-side	Specifies the placement of a table caption
 empty-cells	Specifies whether or not to display borders and background on empty cells in a table
 table-layout	Sets the layout algorithm to be used for a table
+
+-> Propriedades de visibilidade/display em CSS:
+display	Specifies how an element should be displayed
+visibility	Specifies whether or not an element should be visible
+

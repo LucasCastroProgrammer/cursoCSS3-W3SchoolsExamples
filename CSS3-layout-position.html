@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>A propriedade position no layout em CSS</title>
+	<style>
+		div.static{
+			position: static;
+			border: 3px solid #73AD21;
+		}
+		div.relative{
+			position: relative;
+			left: 30px;
+			border: 3px solid #73AD21;
+			height: 200px;
+			width: 400px;
+		}
+		div.fixed{
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			width: 300px;
+			border: 3px solid #73AD21;
+		}
+		div.absolute{
+			position: absolute;
+			top: 80px;
+			right: 0;
+			width: 200px;
+			height: 100px;
+			border: 3px solid #73AD21;
+		}
+		div.sticky{
+			position: -webkit-sticky; /* Safari */
+			position: sticky;
+			top: 0;
+			padding: 5px;
+			background-color: #cae8ca;
+			border: 2px solid #4CAF50;
+		}
+		img{
+			width: 100%;
+			height: auto;
+			opacity: 0.3;
+		}
+		.container{
+			position: relative;
+		}
+		.topleft{
+			position: absolute;
+			top: 8px;
+			left: 16px;
+			font-size: 18px;
+		}
+		.topright{
+			position: absolute;
+			top: 8px;
+			right: 16px;
+			font-size: 18px;
+		}
+		.center{
+			position: absolute;
+			left: 0;
+			top: 50%;
+			width: 100%;
+			text-align: center;
+			font-size: 18px;
+		}
+		.bottomleft{
+			position: absolute;
+			bottom: 8px;
+			left: 16px;
+			font-size: 18px;
+		}
+		.bottomright{
+			position: absolute;
+			bottom: 8px;
+			right: 16px;
+			font-size: 18px;
+		}
+	</style>
+</head>
+<body>
+	<!-- A propriedade position especifica o tipo de método de posicionamento usado por um elemento, que pode ser estático, relativo, fixo, absoluto, entre outros. -->
+	<!-- Valores de posicionamento:
+	-> static;
+	-> relative;
+	-> fixed;
+	-> absolute;
+	-> sticky;
+	-->
+
+	<!-- Um elemento com position: sticky; é posicionado baseado na posição de scroll usuário. O sticky é um meio termo de relative e fixed, dependendo da posição do scroll. É posicionado relativo até uma posição fora do viewport. -->
+	<h2>Posição sticky</h2>
+	<div class="sticky">
+		Eu sou um sticky!
+	</div>
+
+	<!-- Elementos HTML estão posicionados estaticamente por padrão.
+	Elementos posicionados estaticamente não são afetados por propriedades como top, bottom, left e right. Um elemento com position:static; não é posicionado em nenhum caminho especial, é sempre posicionado de acordo com o fluxo normal da página.
+	-->
+	<h2>Position: static</h2>
+	<div class="static">Este elemento div tem posição: estático.</div>
+
+	<!-- Um elemento com position:relative; é posicionado relativo a sua posição normal. Configurando as propriedades top, right, bottom e left como elementos posicionados relativamente -->
+	<h2>Position: relative</h2>
+	<div class="relative">Este elemento div tem uma posição: relativo.</div>
+
+	<!-- Um elemento com position:fixed; é posicionado relativo ao viewport, o que significa que sempre ficará no mesmo lugar, mesmo que a página seja scrollada. As propriedades top, right, bottom e left são usadas para posicionar o elemento. Um elemento não deixa uma lacuna.  -->
+	<h2>Position: fixed</h2>
+	<div class="fixed">Este elemento div tem uma posição: fixo.</div>
+
+	<!-- Um elemento com position:absolute; é posicionado relativo ao mais próximo ancestral posicionado (ao invés de posicionado relativo ao viewport, como o fixo). Porém, se um elemento posicionado absoluto não tem uma posição do ancestral, é usado o documento body, e se move ao longo com o scrollamento da página. -->
+	<h2>Position: absolute</h2>
+	<div class="relative">
+		Este elemento div tem uma posição: relativo.
+		<div class="absolute">
+			Este elemento div tem uma posição: absolute
+		</div>
+	</div>
+
+	<!-- Quando elementos são posicionados, eles podem ser cobertos por outros elementos. O z-index especifica a ordem de um elemento, ou seja, qual elemento deve ficar na frente, ou atrás de outros. 
+		img{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			z-index: -1;
+		}
+		<h1>Este é um cabeçalho.</h1>
+		<img src="w3css.gif" width="100" height="140">
+		<p>Algum texto</p>
+	No exemplo acima, a imagem ficará abaixo do texto com a propriedade -1.
+	-->
+
+	<div class="container">
+		<img src="img_5terre_wide.jpg" alt="Cinque Terre" width="1000" height="300">
+		<div class="topleft">Top Left</div>
+		<div class="topright">Top right</div>
+		<div class="center">Centered</div>
+		<div class="bottomleft">bottom-left</div>
+		<div class="bottomright">bottom-right</div>
+	</div>
+</body>
+</html>

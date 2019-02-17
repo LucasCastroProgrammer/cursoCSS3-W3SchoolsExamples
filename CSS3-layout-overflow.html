@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Overflow em CSS</title>
+	<style>
+		#one{
+			background: #4CAF50;
+			color: white;
+			padding: 15px;
+			width: 50%;
+			height: 100px;
+			overflow: scroll;
+			border: 1px solid #ccc;
+		}
+
+		#two{
+			background-color: #eee;
+			width: 200px;
+			height: 50px;
+			border: 1px dotted black;
+			overflow: visible;
+		}
+		#three{
+			background-color: #eee;
+			width: 200px;
+			height: 50px;
+			border: 1px dotted black;
+			overflow: hidden;
+		}
+		#four{
+			background-color: #eee;
+			width: 200px;
+			height: 100px;
+			border: 1px dotted black;
+			overflow: scroll;
+		}
+		#five{
+			background-color: #eee;
+			width: 200px;
+			height: 50px;
+			border: 1px dotted black;
+			overflow: auto;
+		}
+		#six{
+			background-color: #eee;
+			width: 200px;
+			height: 50px;
+			border: 1px dotted black;
+			overflow-x: hidden;
+			overflow-y: scroll;
+		}
+	</style>
+</head>
+<body>
+	<!-- A propriedade overflow do CSS controla o que acontece em um conteúdo que é muito grande para caber em uma área. -->
+	<h2>Exemplo inicial</h2>
+	<div id="one">This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</div>
+	<!-- A propriedade overflow especifica como comprimir ou adicionar barra de scroll quando um conteúdo de um elemento é muito grande para caber em uma área específica.
+	A propriedade overflow tem os seguintes valores:
+	-> visible: padrão. O overflow não é comprimido. O conteúdo renderiza a caixa do elemento.
+	-> hidden: o overflow é comprimido, e o resto do conteúdo será invisível.
+	-> scroll: o overflow é comprimido e a barra de scroll é adicionada para ver o resto do conteúdo.
+	-> Auto: similar ao scroll, mas são adicionadas scrollbars somente quando necessário.
+	-->
+
+	<!-- Por padrão, o overflow é visible, isso significa que o conteúdo não é comprimido e o conteúdo é renderizado fora da caixa do elemento. -->
+	<h2>Exemplo de Overflow:visible</h2>
+	<div id="two">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+
+	<!-- Com o valor hidden, o overflow é comprimido, e o resto do conteúdo escondido. -->
+	<br>
+	<br>
+	<br>
+	<br>
+	<h2>Exemplo de overflow:hidden</h2>
+	<div id="three">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+
+	<!-- Configurando o valor scroll, o overflow é comprimido e uma barra de scroll é adicionada ao scroll dentro da caixa. -->
+	<h2>Exemplo de overflow: scroll</h2>
+	<div id="four">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+
+	<!-- O valor auto é similar ao scroll, mas é adicionado barras de scroll somente se necessário. -->
+	<h2>Exemplo de overflow: auto</h2>
+	<div id="five">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+
+	<!-- As propriedades overflow-x e overflow-y especifica quando mudar de overflow do conteúdo, se horizontal e/ou vertical.
+	-> overflow-x especifica o que fazer com os limites de esquerda e direita dos conteúdos.
+	-> overflow-y especifica o que fazer com a parte superior e inferior dos conteúdos.
+	-->
+	<h2>Exemplo de overflow: x e y</h2>
+	<div id="six">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+</body>
+</html>

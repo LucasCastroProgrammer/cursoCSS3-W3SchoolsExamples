@@ -144,3 +144,5 @@ position	Specifies the type of positioning for an element
 right	Sets the right margin edge for a positioned box
 top	Sets the top margin edge for a positioned box
 z-index	Sets the stack order of an element
+
+-> Propriedades de overflow em CSS

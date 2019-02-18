@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Drop-downs em CSS</title>
+	<style>
+		/*Estilizando o botão drop-down*/
+		.dropbtn{
+			background-color: #4CAF50;
+			color: white;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+		}
+		/*O container precisava de uma posição para o conteúdo do dropdown*/
+		.dropdown{
+			position: relative;
+			display: inline-block;
+		}
+		/*Conteúdo dropdown*/
+		.dropdown-content{
+			display: none;
+			position: absolute;
+			background-color: #f9f9f9;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			padding: 12px 16px;
+			z-index: 1;
+		}
+		/*Links dentro do dropdown*/
+		.dropdown-content a{
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+		/*Muda a cor do links do dropdown quando o mouse estiver acima*/
+		.dropdown-content a:hover{
+			background-color: #f1f1f1;
+		}
+		/*Mostra o menu dropdown quando o mouse estiver acima.*/
+		.dropdown:hover .dropdown-content{
+			display: block;
+		}
+		/*Muda a cor de fundo do botão dropdown quando o conteúdo é mostrado.*/
+		.dropdown:hover .dropbtn{
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<!-- Create a hoverable dropdown with CSS. -->
+	<!-- Create a dropdown box that appears when the user moves the mouse over an element. -->
+	<h2>Drop-Down básico</h2>
+	<div class="dropdown">
+		<span>Mouse over me</span>
+		<div class="dropdown-content">
+			<p>Hello World!</p>
+		</div>
+	</div>
+
+	<!-- Create a dropdown menu that allows the user to choose an option from a list -->
+	<h2>Menu Drop-down</h2>
+	<div class="dropdown" style="float: left;">
+		<button class="dropbtn">Dropdown - Left</button>
+		<div class="dropdown-content">
+			<a href="#">Link 1</a>
+			<a href="#">Link 2</a>
+			<a href="#">Link 3</a>
+		</div>
+	</div>
+	<div class="dropdown" style="float: right;">
+		<button class="dropbtn">Dropdown - right</button>
+		<div class="dropdown-content">
+			<a href="#">Link 1</a>
+			<a href="#">Link 2</a>
+			<a href="#">Link 3</a>
+		</div>
+	</div>
+</body>
+</html>

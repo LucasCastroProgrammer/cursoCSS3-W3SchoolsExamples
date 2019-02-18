@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Barra de navegação em CSS - Parte 2</title>
+	<style>
+		body{
+			font-size: 28px;
+		}
+		/*An example of a gray horizontal navigation bar with a thin gray border*/
+		ul{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			/*background-color:*/
+			border: 1px solid #e7e7e7;
+			background-color: #333;
+			/*Make the navigation bar stay at the top or the bottom of the page, even when the user scrolls the page*/
+			position: sticky;
+			top: 0;
+		}
+		/*Add the border-right property to <li> to create link dividers*/
+		li{
+			/*Você pode usar display: inline; Mas o melhor é o exemplo abaixo.*/
+			/* Another way of creating a horizontal navigation bar is to float the <li> elements, and specify a layout for the navigation links */
+			float: left;
+			border-right: 1px solid #bbb;
+		}
+		li:last-child{
+			border-right: none;
+		}
+		/*Create a basic horizontal navigation bar with a dark background color and change the background color of the links when the user moves the mouse over them*/
+		li a{
+			display: block;
+			/*color: #666;*/
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		li a:hover:not(.active){
+			background-color: #111;
+		}
+		/*Add an "active" class to the current link to let the user know which page he/she is on*/
+		.active{
+			background-color: #4CAF50;
+		}
+	</style>
+</head>
+<body>
+	
+	<div>
+		<h2>Scroll Down</h2>
+		<p>Scroll Down to see the sticky effect.</p>
+	</div>
+	<!-- There are two ways to create a horizontal navigation bar. Using inline or floating list items. -->
+	<ul>
+		<li><a href="#" class="active">Home</a></li>
+		<li><a href="#">News</a></li>
+		<li><a href="#">Contact</a></li>
+		<!-- Right-align links by floating the list items to the right (float:right;) -->
+		<li style="float: right;"><a href="#" class="active">About</a></li>
+	</ul>
+
+	<!-- 
+	Use position: sticky; to <li> to create a sticky navbar.
+	A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed)
+	-->
+	<h3>Sticky Navigation Bar Example</h3>
+	<p>The navbar will <strong>stick</strong> to the top when you reach its scroll position.</p>
+	<p><strong>Note:</strong> Internet Explorer, Edge 15 and earlier versions do not support sticky positioning. Safari requires a -webkit- prefix.</p>
+	<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+	<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+	<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+	<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+	<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+	<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+	<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+</body>
+</html>

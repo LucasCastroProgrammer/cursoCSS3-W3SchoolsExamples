@@ -20,6 +20,62 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
+		.right{
+			position: absolute;
+			right: 0px;
+			width: 300px;
+			border: 3px solid #73AD21;
+			padding: 10px;
+		}
+		.right2{
+			float: right;
+			width: 300px;
+			border: 3px solid #73AD21;
+			padding: 10px;
+		}
+		.one{
+			border: 3px solid #4CAF50;
+			padding: 5px;
+		}
+		.img1{
+			float: right;
+		}
+		.clearfix{
+			overflow:auto;
+		}
+		.img2{
+			float: right;
+		}
+		.center3{
+			/*To center both vertically and horizontally, use padding and text-align: center:*/
+			padding: 70px 0;
+			border: 3px solid green;
+			text-align: center;
+		}
+		.center4{
+			line-height: 200px;
+			height: 200px;
+			border: 3px solid green;
+			text-align: center;
+		}
+		.center4 p{
+			line-height: 1.5;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.center5{
+			height: 200px;
+			position: relative;
+			border: 3px solid green;
+		}
+		.center5 p{
+			margin: 0;
+			position: absolute;
+			top:50%;
+			left: 50%;
+			-ms-transform:translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
 	</style>
 </head>
 <body>
@@ -42,5 +98,49 @@
 	<!-- To center an image, set left and right margin to auto and make it into a block element: -->
 	<h2>Centralizar uma imagem</h2>
 	<img src="paris.jpg" alt="Paris" style="width:40%">
+
+	<!-- One method for aligning elements is to use position: absolute; -->
+	<h2>Alinhamento usando position</h2>
+	<div class="right">
+		<p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</p>
+	</div>
+
+	<!-- Another method for aligning elements is to use the float property -->
+	<br><br><br><br><br><br>
+	<h2>Alinhamento usando float</h2>
+	<div class="right2">
+		<p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</p>
+	</div>
+
+	<!-- Then we can add overflow: auto; to the containing element to fix the problem if the element is taller than the element containing it. -->
+	<div>
+		<div class="one">
+			<img src="pineapple.jpg" alt="Pineapple" width="170" height="170">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...
+		</div>
+
+		<br><br><br><br><br>
+
+		<div class="clearfix one">
+			<img class="img2" src="pineapple.jpg" alt="Pineapple" width="170" height="170">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...
+		</div>
+	</div>
+
+	<!-- There are many ways to center an element vertically in CSS. A simple solution is to use top and bottom padding -->
+	<h2>Centralizado verticalmente</h2>
+	<div class="center3">
+		<p>Eu estou verticalmente centralizado.</p>
+	</div>
+
+	<h2>Centralizado verticalmente - Usando line-height</h2>
+	<div class="center4">
+		<p>Eu estou verticalmente e horizontalmente centralizado.</p>
+	</div>
+
+	<h2>Centralizado verticalmente - Usando position e transform</h2>
+	<div class="center5">
+		<p>Eu estou verticalmente e horizontalmente centralizado.</p>
+	</div>
 </body>
 </html>

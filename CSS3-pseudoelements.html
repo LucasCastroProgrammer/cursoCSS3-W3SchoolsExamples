@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Pseudo-elementos em CSS</title>
+	<style>
+		.one::first-line{
+			color: #ff0000;
+			font-variant: small-caps;
+		}
+		.two::first-letter{
+			color: #ff0000;
+			font-size: xx-large;
+		}
+		p.intro::first-letter{
+			color: #ff0000;
+			font-size: 200%;
+		}
+		.three p::first-letter{
+			color: #ff0000;
+			font-size: xx-large;
+		}
+		.three p::first-line{
+			color: #0000ff;
+			font-variant: small-caps;
+		}
+		.four::before{
+			content: url(pineapple.jpg);
+		}
+		.five::after{
+			content: url(pineapple.jpg);
+		}
+		::-moz-selection{
+			/*Código para o firefox*/
+			color: red;
+			background:yellow;
+		}
+		::selection{
+			color: red;
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+	<!-- A CSS pseudo-element is used to style specified parts of an element. -->
+	<!-- For example, it can be used to:
+	-> Style the first letter, or line, of an element
+	-> Insert content before, or after, the content of an element -->
+
+	<!-- The ::first-line pseudo-element is used to add a special style to the first line of a text. -->
+	<p class="one">You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+	<!--
+	-> font properties
+	-> color properties
+	-> background properties
+	-> word-spacing
+	-> letter-spacing
+	-> text-decoration
+	-> vertical-align
+	-> text-transform
+	-> line-height
+	-> clear
+	-->
+
+	<!-- The ::first-letter pseudo-element is used to add a special style to the first letter of a text. -->
+	<p class="two">
+		You can use the ::first-letter pseudo-element to add a special effect to the first character of a text!
+	</p>
+	<!--
+	The ::first-letter pseudo-element can only be applied to block-level elements.
+
+	The following properties apply to the ::first-letter pseudo- element: 
+
+	font properties
+	color properties 
+	background properties
+	margin properties
+	padding properties
+	border properties
+	text-decoration
+	vertical-align (only if "float" is "none")
+	text-transform
+	line-height
+	float
+	clear
+	-->
+
+	<!-- Pseudo-elements can be combined with CSS classes: -->
+	<p class="intro">Isso é uma introdução.</p>
+	<p>This is a paragraph with some text. A bit more text even.</p>
+
+	<!-- Several pseudo-elements can also be combined. -->
+	<div class="three">
+		<p>You can combine the ::first-letter and ::first-line pseudo-elements to add a special effect to the first letter and the first line of a text!</p>
+	</div>
+
+	<!-- The ::before pseudo-element can be used to insert some content before the content of an element. -->
+	<h1 class="four">Este é um cabeçalho.</h1>
+	<p>The ::before pseudo-element inserts content before the content of an element.</p>
+
+	<!-- The ::after pseudo-element can be used to insert some content after the content of an element. -->
+	<h1 class="five">Este é um cabeçalho.</h1>
+	<p>The ::after pseudo-element inserts content after the content of an element.</p>
+
+	<!-- The ::selection pseudo-element matches the portion of an element that is selected by a user. -->
+	<!-- The following CSS properties can be applied to ::selection: color, background, cursor, and outline. -->
+	<div>
+		<h1>Selecione algum texto desta página.</h1>
+		<p>Este é um parágrafo.</p>
+		<div>Este é algum texto de um elemento div.</div>
+	</div>
+</body>
+</html>

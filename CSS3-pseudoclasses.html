@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Pseudoclasses em CSS</title>
+	<style>
+		.one:link{
+			/*Link não visitado*/
+			color: red;
+		}
+		.one:visited{
+			/*Link visitado*/
+			color: green;
+		}
+		.one:hover{
+			/*Mouse acima do link*/
+			color: hotpink;
+		}
+		.one:active{
+			color: blue;
+		}
+		a.two:hover{
+			color: #ff0000;
+		}
+		.three{
+			background-color: green;
+			color: white;
+			padding: 25px;
+			text-align: center;
+		}
+		.three:hover{
+			background-color: blue;
+		}
+		.five{
+			display: none;
+			background-color: yellow;
+			padding: 20px;
+		}
+		.four:hover .five{
+			display: block;
+		}
+		.six p:first-child{
+			color: blue;
+		}
+		.seven p:first-child i{
+			color: blue;
+		}
+		q:lang(no){
+			quotes:"~" "~";
+		}
+	</style>
+</head>
+<body>
+	<!-- A pseudo-class is used to define a special state of an element. -->
+	<!-- For example, it can be used to:
+	Style an element when a user mouses over it
+	Style visited and unvisited links differently
+	Style an element when it gets focus
+	-->
+	<!--
+	selector:pseudo-class {
+  		property:value;
+	}
+	-->
+
+	<!-- Links can be displayed in different ways -->
+	<p><a href="#" class="one">Isto é um link.</a></p>
+	<!-- a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective. -->
+	<!-- a:active MUST come after a:hover in the CSS definition in order to be effective. -->
+
+	<!-- Pseudo-classes can be combined with CSS classes -->
+	<p><a href="#" class="two">Sintaxe CSS</a></p>
+	<p><a href="#">Tutorial CSS</a></p>
+
+	<!-- An example of using the :hover pseudo-class on a <div> element. -->
+	<div class="three">
+		Mouse over me.
+	</div>
+
+	<!-- Hover over a <div> element to show a <p> element (like a tooltip): -->
+	<div class="four">
+		Passa o mouse aqui pra você ver o que acontece...
+		<p class="five">Tada! Here I am!</p>
+	</div>
+
+	<!-- The :first-child pseudo-class matches a specified element that is the first child of another element. -->
+	<div class="six">
+		<p>Isso é algum texto.</p>
+		<p>Isso é algum texto.</p>
+	</div>
+
+	<div class="seven">
+		<p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+		<p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+	</div>
+
+	<!-- The :lang pseudo-class allows you to define special rules for different languages. -->
+	<p>Algum texto. <q lang="no">Um citação em um parágrafo</q>. Algum texto.</p>
+</body>
+</html>

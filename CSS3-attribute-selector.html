@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Seletores de atributo em CSS</title>
+	<style>
+		a[target]{
+			background-color: yellow;
+		}
+		/*Ou poderia usar o exemplo abaixo, fazendo referência ao valor o atributo: 
+		a[target="value"]{
+			background-color: yellow;
+		}*/
+		[title~=flower]{
+			border: 5px solid yellow;
+		}
+		[class|=top]{
+			background: yellow;
+		}
+		[class^="top"]{
+			background: yellow;
+		}
+		[class$="test"]{
+			background: yellow;
+		}
+		[class*="te"]{
+			background: yellow;
+		}
+		input[type="text"]{
+			width: 150px;
+			display: block;
+			margin-bottom: 10px;
+			background-color: yellow;
+		}
+		input[type="button"]{
+			width: 120px;
+			margin-left: 35px;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<!-- It is possible to style HTML elements that have specific attributes or attribute values. -->
+	<!-- The [attribute] selector is used to select elements with a specified attribute.
+	The following example selects all <a> elements with a target attribute
+	-->
+	<a href="https://www.w3schools.com">w3schools</a>
+	<a href="http://www.disney.com" target="_blank">disney.com</a>
+	<a href="http://www.wikipedia.org" target="_blank">wikipedia.org</a>
+
+	<!-- The [attribute="value"] selector is used to select elements with a specified attribute and value. -->
+
+	<!-- The [attribute~="value"] selector is used to select elements with an attribute value containing a specified word. -->
+	<br><br>
+	<img src="klematis.jpg" title="klematis flower" width="150" height="113">
+	<img src="img_flwr.gif" title="flower" width="224" height="162">
+	<img src="img_tree.gif" title="tree" width="200" height="358">
+
+	<!-- The [attribute|="value"] selector is used to select elements with the specified attribute starting with the specified value. -->
+	<h1 class="top-header">Welcome</h1>
+	<p class="top-text">Hello World!</p>
+	<p class="topcontent">Are you learning CSS?</p>
+
+	<!-- The [attribute^="value"] selector is used to select elements whose attribute value begins with a specified value. -->
+
+	<!-- The [attribute$="value"] selector is used to select elements whose attribute value ends with a specified value. -->
+	<div class="first_test">The first div element.</div>
+	<div class="second">The second div element.</div>
+	<div class="my-test">The third div element.</div>
+	<div class="mytest">This is some text in a paragraph.</div>
+
+	<!-- The [attribute*="value"] selector is used to select elements whose attribute value contains a specified value. -->
+
+	<!-- The attribute selectors can be useful for styling forms without class or ID -->
+	<form name="input" action="" method="GET">
+		Primeiro nome:<input type="text" name="Name" value="Peter" size="20">
+		Último nome:<input type="text" name="Name" value="Griffin" size="20">
+		<input type="button" value="Example button">
+	</form>
+</body>
+</html>

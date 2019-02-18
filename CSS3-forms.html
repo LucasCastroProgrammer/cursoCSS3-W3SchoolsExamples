@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Formulários em CSS</title>
+	<style>
+		input{
+			width: 100%;
+		}
+		input[type=text]{
+			width: 100%;
+			padding: 12px 20px;
+			margin:8px 0;
+			box-sizing: border-box;
+			/*border: 2px solid red;*/
+			border-radius: 4px;
+			/*Pode-se ocultar a borda da caixa de texto. border: none;*/
+			/*Colocar uma cor de fundo para a caixa de texto.
+			background-color: #3CBC8D;
+			color:white*/
+		}
+		input[type=text]{
+			/*Podemos adicionar uma borda somente na parte de baixo.
+			O código ficaria desta forma:
+			border:none;
+			border-bottom: 2px solid red;
+			*/
+		}
+		/*Use the :focus selector to do something with the input field when it gets focus*/
+		input[type=text]:focus{
+			/*background-color: lightblue;*/
+			border: 3px solid #555;
+		}
+		.one{
+			width: 130px;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			border-radius: 4px;
+			font-size: 16px;
+			background-color: white;
+			/*background-image: url('searchicon.png');*/
+			background-position: 10px 10px;
+			background-repeat: no-repeat;
+			padding: 12px 20px 12px 40px;
+			/*In this example we use the CSS transition property to animate the width of the search input when it gets focus. You will learn more about the transition property later*/
+			-webkit-transition: width 0.4s ease-in-out;
+			transition: width 0.4s ease-in-out;
+		}
+		.one:focus{
+			width: 100%;
+		}
+		textarea{
+			width: 100%;
+			height: 150px;
+			padding: 12px 20px;
+			box-sizing: border-box;
+			border-radius: 4px;
+			background-color: #f8f8f8;
+			font-size: 16px;
+			resize: none;
+			margin-top: 10px; 
+		}
+		select{
+			width: 100%;
+			padding: 16px 20px;
+			border: none;
+			border-radius: 4px;
+			background-color: #f1f1f1;
+		}
+		input[type=button],
+		input[type=submit],
+		input[type=reset]{
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 16px 32px;
+			text-decoration: none;
+			margin:4px 2px;
+			cursor: pointer;
+			width: 300px;
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<!-- Use the width property to determine the width of the input field. -->
+	<form>
+		<label for="fname">Primeiro nome:</label>
+		<input type="text" id="fname" name="fname">
+		<label for="lname">Último nome:</label>
+		<input type="text" id="lname" name="lname">
+		<select id="country" name="country">
+			<option value="au">Australia</option>
+			<option value="ca">Canada</option>
+			<option value="usa">USA</option>
+		</select>
+	</form>
+	<!-- The example above applies to all <input> elements. If you only want to style a specific input type, you can use attribute selectors:
+	input[type=text] - will only select text fields
+	input[type=password] - will only select password fields
+	input[type=number] - will only select number fields
+	etc..
+	-->
+
+	<!-- Use the padding property to add space inside the text field. -->
+
+	<!-- By default, some browsers will add a blue outline around the input when it gets focus (clicked on). You can remove this behavior by adding outline: none; to the input. -->
+
+	<!-- If you want an icon inside the input, use the background-image property and position it with the background-position property. Also notice that we add a large left padding to reserve the space of the icon -->
+	<!--
+	<h2>Input com um ícone</h2>
+	<form>
+		<input class="one" type="text" name="search" placeholder="Search...">
+	</form>
+	-->
+
+	<!-- Use the resize property to prevent textareas from being resized (disable the "grabber" in the bottom right corner) -->
+	<form>
+		<textarea>Algum texto...</textarea>
+	</form>
+
+	<!--
+	<input type="button" value="Button">
+	<input type="reset" name="Reset">-->
+	<input type="submit" name="Submit">
+</body>
+</html>

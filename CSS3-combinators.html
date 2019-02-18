@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Combinators em CSS</title>
+	<style>
+		div p{
+			background-color: yellow;
+		}
+		section > p{
+			background-color: yellow;
+		}
+		aside + p{
+			background-color: yellow;
+		}
+		footer ~ p{
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<!-- A combinator is something that explains the relationship between the selectors. -->
+	<!-- A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator. -->
+	<!-- 
+	There are four different combinators in CSS:
+	descendant selector (space)
+	child selector (>)
+	adjacent sibling selector (+)
+	general sibling selector (~)
+	-->
+	<!-- The descendant selector matches all elements that are descendants of a specified element. -->
+	<h2>Seletor descendente</h2>
+	<div>
+		<p>Paragrafo 1 do div.</p>
+		<p>Parágrafo 2 do div.</p>
+		<span><p>Parágrafo 3 do div.</p></span>
+	</div>
+
+	<p>Parágrafo 4. Não é um div.</p>
+	<p>Parágrafo 5. Não é um div.</p>
+
+	<!-- The child selector selects all elements that are the immediate children of a specified element. -->
+	<h2>Seletor filho</h2>
+	<section>
+		<p>Parágrafo 1 da div.</p>
+		<p>Parágrafo 2 da div.</p>
+		<span><p>Parágrafo 3 da div.</p></span><!-- Não é filho, mas sim descendente. -->
+	</section>
+
+	<!-- The adjacent sibling selector selects all elements that are the adjacent siblings of a specified element. -->
+	<!-- Sibling elements must have the same parent element, and "adjacent" means "immediately following". -->
+	<h2>Seletor irmão adjacente</h2>
+	<aside>
+		<p>Parágrafo 1 do aside.</p>
+		<p>Parágrafo 2 do aside.</p>
+	</aside>
+	<p>Parágrafo 3 do documento.</p>
+
+	<!-- The general sibling selector selects all elements that are siblings of a specified element. -->
+	<h2>Seletor irmão geral.</h2>
+	
+	<p>Parágrafo 1</p>
+	
+	<footer>
+		<code>Algum código.</code>
+		<p>Parágrafo 2</p>
+	</footer>
+
+	<p>Parágrafo 3.</p>
+	<code>Algum código.</code>
+	<p>Parágrafo 4.</p>
+</body>
+</html>

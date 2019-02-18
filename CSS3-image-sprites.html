@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Image Sprites em CSS</title>
+	<style>
+		#navlist{
+			position: relative;
+		}
+		#navlist li{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			position: absolute;
+			top: 0;
+		}
+		#navlist li, #navlist a{
+			height: 44px;
+			display: block;
+		}
+		#home{
+			left: 0px;
+			width: 46px;
+			background: url('img_navsprites.gif') 0 0;
+		}
+		#prev{
+			left: 63px;
+			width: 43px;
+			background: url('img_navsprites.gif') -47px 0;
+		}
+		#next{
+			left: 129px;
+			width: 43px;
+			background: url('img_navsprites.gif') -91px 0;
+		}
+		#home a:hover{
+			background: url('img_navsprites_hover.gif') 0 -45px;
+		}
+		#prev a:hover{
+			background: url('img_navsprites_hover.gif') -47px -45px;
+		}
+		#next a:hover{
+			background: url('img_navsprites_hover.gif') -91px -45px;
+		}
+	</style>
+</head>
+<body>
+	<!-- An image sprite is a collection of images put into a single image.
+
+	A web page with many images can take a long time to load and generates multiple server requests.
+
+	Using image sprites will reduce the number of server requests and save bandwidth. -->
+
+	<!--
+		Instead of using three separate images, we use this single image ("img_navsprites.gif"):
+		With CSS, we can show just the part of the image we need.
+		In the following example the CSS specifies which part of the "img_navsprites.gif" image to show
+	-->
+
+	<!-- 
+	<img id="home" src="img_trans.gif" width="1" height="1"><br><br>
+	<img id="next" src="img_trans.gif" width="1" height="1">
+	-->
+
+	<ul id="navlist">
+		<li id="home"><a href="#"></a></li>
+		<li id="prev"><a href="#"></a></li>
+		<li id="next"><a href="#"></a></li>
+	</ul>
+</body>
+</html>

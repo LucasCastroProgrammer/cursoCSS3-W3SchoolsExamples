@@ -197,3 +197,5 @@ overflow-y	Specifies what to do with the top/bottom edges of the content if it o
 ::first-letter	p::first-letter	Selects the first letter of every <p> element
 ::first-line	p::first-line	Selects the first line of every <p> element
 ::selection	p::selection	Selects the portion of an element that is selected by a user
+
+-> Propriedades de contador em CSS

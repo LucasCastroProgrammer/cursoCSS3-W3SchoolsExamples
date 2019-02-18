@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Opacidade e Transparência</title>
+	<style>
+		.one{
+			opacity: 0.5;
+			filter: alpha(opacity=50);/*Para o IE8 ou antecessor.*/
+		}
+		.two{
+			opacity:0.5;
+			filter: alpha(opacity=50);/*Para o IE8 ou anteriores*/
+		}
+		.two:hover{
+			opacity: 1.0;
+			filter: alpha(opacity=100);/*Para IE8 e anteriores.*/
+		}
+		.three:hover{
+			opacity: 0.5;
+			filter: alpha(opacity=50)/*Para IE8 e anteriores.*/
+		}
+		div{
+			background-color: #4ACF50;
+			padding: 10px;
+		}
+		div.first{
+			opacity: 0.1;
+			filter: alpha(opacity=10);
+		}
+		div.second{
+			opacity: 0.3;
+			filter: alpha(opacity=30);
+		}
+		div.third{
+			opacity: 0.6;
+			filter: alpha(opacity=60);
+		}
+		.all{
+			background:rgb(76,175,80);
+			padding: 10px;
+		}
+		div.um{
+			background: rgba(76,175,80,0.1);
+		}
+		div.dois{
+			background: rgba(76,175,80,0.3);
+		}
+		div.tres{
+			background: rgba(76,175,80,0.6);
+		}
+		div.background{
+			background: url(pineapple.jpg);
+			border: 2px solid black;
+		}
+		div.transbox{
+			margin: 30px;
+			background-color: #ffffff;
+			border: 1px solid black;
+			opacity: 0.6;
+			filter: alpha(opacity=60);/*Para IE8 e anteriores.*/
+		}
+	</style>
+</head>
+<body>
+	<!-- The opacity property specifies the opacity/transparency of an element. -->
+	<!-- The opacity property can take a value from 0.0 - 1.0. The lower value, the more transparent: -->
+	<h1>Transparência de imagem</h1>
+	<p>Imagem com 50% de opacidade.</p>
+	<img class="one" src="img_forest.jpg" alt="Forest" width="170" height="100">
+
+	<!-- The opacity property is often used together with the :hover selector to change the opacity on mouse-over: -->
+	<h2>Transparência de imagem 2</h2>
+	<img class="two" src="img_forest.jpg" alt="Forest" width="170" height="100">
+	<img class="two" src="img_mountains.jpg" alt="Mountains" width="170" height="100">
+	<img class="two" src="img_5terre.jpg" alt="Italy" width="170" height="100">
+
+	<!-- Exemplo de hover reverso -->
+	<h2>Exemplo de hover reverso</h2>
+	<img class="three" src="img_forest.jpg" alt="Forest" width="170" height="100">
+	<img class="three" src="img_mountains.jpg" alt="Mountains" width="170" height="100">
+	<img class="three" src="img_5terre.jpg" alt="Italy" width="170" height="100">
+
+	<!-- When using the opacity property to add transparency to the background of an element, all of its child elements inherit the same transparency. This can make the text inside a fully transparent element hard to read -->
+	<h2>Caixa de transparência</h2>
+	<div class="first">opacity 0.1</div>
+	<div class="second">opacity 0.3</div>
+	<div class="third">opacity 0.6</div>
+	<div class="fourth">opacity 1 (default)</div>
+
+	<!-- If you do not want to apply opacity to child elements, like in our example above, use RGBA color values. The following example sets the opacity for the background color and not the text: -->
+	<h2>Transparência usando RGBA</h2>
+	
+	<div class="um">10% opacidade</div>
+	<div class="dois">30% opacidade</div>
+	<div class="tres">60% opacidade</div>
+	<div>Default</div>
+
+	<h2>Texto em uma caixa transparente</h2>
+	<div class="background">
+		<div class="transbox">
+			<p>Isso é algum texto que é mostrado em uma caixa transparente.</p>
+		</div>
+	</div>
+</body>
+</html>

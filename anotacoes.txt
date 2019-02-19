@@ -198,4 +198,9 @@ overflow-y	Specifies what to do with the top/bottom edges of the content if it o
 ::first-line	p::first-line	Selects the first line of every <p> element
 ::selection	p::selection	Selects the portion of an element that is selected by a user
 
--> Propriedades de contador em CSS
+-> Propriedade Rounded Corners em CSS:
+border-radius	A shorthand property for setting all the four border-*-*-radius properties
+border-top-left-radius	Defines the shape of the border of the top-left corner
+border-top-right-radius	Defines the shape of the border of the top-right corner
+border-bottom-right-radius	Defines the shape of the border of the bottom-right corner
+border-bottom-left-radius	Defines the shape of the border of the bottom-left corner

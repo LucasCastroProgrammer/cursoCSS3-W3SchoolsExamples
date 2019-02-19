@@ -222,3 +222,7 @@ background-size	Specifies the size of the background image(s)
 
 -> Propriedades de gradiente em CSS:
 background-image	Sets one or more background images for an element.
+
+-> Propriedades de sombra:
+box-shadow	Adds one or more shadows to an element
+text-shadow	Adds one or more shadows to a text

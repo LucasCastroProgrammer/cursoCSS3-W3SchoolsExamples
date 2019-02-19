@@ -219,3 +219,6 @@ background-clip	Specifies the painting area of the background
 background-image	Specifies one or more background images for an element
 background-origin	Specifies where the background image(s) is/are positioned
 background-size	Specifies the size of the background image(s)
+
+-> Propriedades de gradiente em CSS:
+background-image	Sets one or more background images for an element.

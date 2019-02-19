@@ -5,6 +5,9 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Layout de website em CSS</title>
 	<style>
+		*{
+			box-sizing: border-box;
+		}
 		body{
 			margin: 0;
 		}
@@ -40,6 +43,14 @@
 			width: 33.33%;
 			padding: 15px;
 		}
+		/*Left and right column*/
+		.column.side{
+			width: 25%;
+		}
+		/*Middle column*/
+		.column.middle{
+			width: 50%;
+		}
 		/*Limpa os floats após as colunas*/
 		.row:after{
 			content: "";
@@ -51,6 +62,12 @@
 			.column{
 				width: 100%;
 			}
+		}
+		/*Estilizando o footer*/
+		.footer{
+			background-color: #f1f1f1;
+			padding: 10px;
+			text-align: center;
 		}
 	</style>
 </head>
@@ -84,6 +101,31 @@
 			<h2>Column</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
 		</div>
+	</div>
+
+	<!-- The main content is the biggest and the most important part of your site.
+
+	It is common with unequal column widths, so that most of the space is reserved for the main content. The side content (if any) is often used as an alternative navigation or to specify information relevant to the main content. Change the widths as you like, only remember that it should add up to 100% in total -->
+	<div class="row">
+		<div class="column side">
+			<h2>Side</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+		</div>
+
+		<div class="column middle">
+			<h2>Main Content</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+		</div>
+
+		<div class="column side">
+			<h2>Side</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+		</div>
+	</div>
+
+	<div class="footer">
+		<p>Footer</p>
 	</div>
 </body>
 </html>

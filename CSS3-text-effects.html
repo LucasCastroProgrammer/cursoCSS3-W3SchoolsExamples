@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Efeitos de texto em CSS</title>
+	<style>
+		p.test1{
+			white-space: nowrap;
+			width: 200px;
+			border: 1px solid #000000;
+			overflow: hidden;
+			text-overflow: clip;
+		}
+		p.test2{
+			white-space: nowrap;
+			width: 200px;
+			border: 1px solid #000000;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		/*The following example shows how you can display the overflowed content when hovering over the element*/
+		p.test1:hover{
+			overflow: visible;
+		}
+		p.test2:hover{
+			overflow: visible;
+		}
+		p.test3{
+			width: 11em;
+			border: 1px solid #000000;
+			word-wrap: break-word;
+		}
+		p.test4{
+			width: 140px;
+			border: 1px solid #000000;
+			word-break: keep-all;
+		}
+		p.test5{
+			width: 140px;
+			border: 1px solid #000000;
+			word-break: break-all;
+		}
+	</style>
+</head>
+<body>
+	<!-- The CSS text-overflow property specifies how overflowed content that is not displayed should be signaled to the user. -->
+
+	<h1>A propriedade text-overflow</h1>
+	<h2>text-overflow: clip</h2>
+	<p class="test1">This is some long text that will not fit in the box</p>
+
+	<h2>text-overflow: ellipsis</h2>
+	<p class="test2">
+		This is some long text that will not fit in the box.
+	</p>
+
+	<!-- The CSS word-wrap property allows long words to be able to be broken and wrap onto the next line. -->
+	<h2>A propriedade word-wrap</h2>
+	<p class="test3">This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.</p>
+
+	<!-- The CSS word-break property specifies line breaking rules. -->
+	<h2>A propriedade word-breaking</h2>
+	<p class="test4">This paragraph contains some text. This line will-break-at-hyphens.</p>
+	<p class="test5">This paragraph contains some text. The lines will break at any character.</p>
+</body>
+</html>

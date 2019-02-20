@@ -5,14 +5,76 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Transformaçoes em 2D</title>
 	<style>
-		#one{
+		div{
 			width: 300px;
 			height: 100px;
 			background-color: yellow;
 			border: 1px solid black;
+		}
+		#one{
 			-ms-transform: translate(50px, 100px);/*IE9*/
 			-webkit-transform:translate(50px, 100px);/*Safari*/
 			transform: translate(50px, 100px);
+		}
+		div#myDiv{
+			-ms-transform: rotate(20deg);/*IE9*/
+			-webkit-transform: rotate(20deg);/*Safari*/
+			transform: rotate(20deg);
+		}
+		div#myDiv2{
+			-ms-transform: rotate(-20deg);
+			-webkit-transform: rotate(-20deg);
+			transform: rotate(-20deg);
+		}
+		div#two{
+			margin: 150px;
+			width: 200px;
+			height: 100px;
+			background-color: yellow;
+			border: 1px solid black;
+			-ms-transform: scale(2,3);
+			-webkit-transform: scale(2,3);
+			transform: scale(2,3);
+		}
+		div#three{
+			margin: 150px;
+			width: 200px;
+			height: 100px;
+			background-color: yellow;
+			border: 1px solid black;
+			-ms-transform: scale(0.5, 0.5);
+			-webkit-transform:scale(0.5,0.5);
+			transform: scale(0.5, 0.5);
+		}
+		div#myDiv3{
+			-ms-transform: skewX(20deg);
+			-webkit-transform: skewX(20deg);
+			transform: skewX(20deg);
+		}
+		div#myDiv4{
+			-ms-transform: skewY(20deg);
+			-webkit-transform: skewY(20deg);
+			transform: skewY(20deg);
+		}
+		div#myDiv5{
+			-ms-transform: skew(20deg, 10deg);
+			-webkit-transform: skew(20deg, 10deg);
+			transform: skew(20deg, 10deg);
+		}
+		div#myDiv6{
+			-ms-transform: skew(20deg);
+			-webkit-transform: skew(20deg);
+			transform: skew(20deg);
+		}
+		div#myDiv7{
+			-ms-transform: matrix(1, -0.3, 0, 1, 0, 0);
+			-webkit-transform: matrix(1, -0.3, 0, 1, 0, 0);
+			transform: matrix(1, -0.3, 0, 1, 0, 0);
+		}
+		div#myDiv8{
+			-ms-transform: matrix(1, 0, 0.5, 1, 150, 0);
+			-webkit-transform: matrix(1, 0, 0.5, 1, 150, 0);
+			transform: matrix(1, 0, 0.5, 1, 150, 0);
 		}
 	</style>
 </head>
@@ -37,6 +99,41 @@
 	<div id="one">This div element is moved 50 pixels to the right, and 100 pixels down from its current position.</div>
 
 	<!-- The rotate() method rotates an element clockwise or counter-clockwise according to a given degree. -->
-	
+	<h1>O método rotate()</h1>
+	<div id="myDiv">This div element is rotated clockwise 20 degrees.</div>	
+
+	<!-- Using negative values will rotate the element counter-clockwise. -->
+	<h2>O método rotate em sentido anti-horário</h2>
+	<div id="myDiv2">This div element is rotated clockwise 20 degrees.</div>
+
+	<!-- The scale() method increases or decreases the size of an element (according to the parameters given for the width and height). -->
+	<h2>O método scale()</h2>
+	<div id="two">This div element is two times of its original width, and three times of its original height.</div>
+
+	<div id="three">This div element is decreased to be half of its original width and height.</div>
+
+	<!-- The skewX() method skews an element along the X-axis by the given angle. -->
+	<h2>O método skewX()</h2>
+	<div id="myDiv3">This div element is skewed 20 degrees along the X-axis.</div>
+
+	<!-- The skewY() method skews an element along the Y-axis by the given angle. -->
+	<h2>O método skewY()</h2>
+	<div id="myDiv4">This div element is skewed 20 degrees along the Y-axis.</div>
+
+	<!-- The skew() method skews an element along the X and Y-axis by the given angles. -->
+	<h2>O método skew()</h2>
+	<div id="myDiv5">
+		This div element is skewed 20 degrees along the X-axis, and 10 degrees along the Y-axis.
+	</div>
+
+	<!-- If the second parameter is not specified, it has a zero value. So, the following example skews the <div> element 20 degrees along the X-axis -->
+	<div id="myDiv6">
+		This div element is skewed 20 degrees along the X-axis.
+	</div>
+
+	<h2>O método matrix()</h2>
+	<div>This a normal div element.</div>
+	<div id="myDiv7">Using the matrix() method.</div>
+	<div id="myDiv8">Another use of the matrix() method.</div>
 </body>
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Transformações em 3D</title>
+	<style>
+		div{
+			width: 300px;
+			height: 100px;
+			background-color: yellow;
+			border: 1px solid black;
+		}
+		#myDiv{
+			-webkit-transform: rotateX(150deg);/*Safari*/
+			transform: rotateX(150deg);/*Sintaxe padrão*/
+		}
+		#myDiv2{
+			-webkit-transform: rotateY(150deg);/*Safari*/
+			transform: rotateY(150deg);/*Sintaxe padrão*/
+		}
+		#myDiv3{
+			-webkit-transform: rotateZ(90deg);
+			transform: rotateZ(90deg);
+		}
+	</style>
+</head>
+<body>
+	<!-- CSS allows you to format your elements using 3D transformations. -->
+
+	<!-- In this chapter you will learn about the following 3D transformation methods:
+
+	rotateX()
+	rotateY()
+	rotateZ() -->
+	<h1>O método rotate()</h1>
+	<div>Um div normal</div>
+	<div id="myDiv">This div element is rotated 150 degrees</div>
+
+	<!-- The rotateY() method rotates an element around its Y-axis at a given degree -->
+	<h1>O método rotateY()</h1>
+	<div>Um div normal.</div>
+	<div id="myDiv2">This div element is rotated 150 degrees.</div>
+
+	<!-- The rotateZ() method rotates an element around its Z-axis at a given degree. -->
+	<h1>O método rotateZ()</h1>
+	<div>This is a normal div element.</div>
+	<div id="myDiv3">This div element is rotated 90 degrees.</div>
+</body>
+</html>

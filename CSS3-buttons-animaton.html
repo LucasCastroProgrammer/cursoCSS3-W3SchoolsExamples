@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Animação de botões em CSS</title>
+	<style>
+		.btn1{
+			display: inline-block;
+			border-radius: 4px;
+			background-color: #f4511e;
+			border: none;
+			color: #FFFFFF;
+			text-align: center;
+			font-size: 28px;
+			padding: 20px;
+			width: 200px;
+			transition: all 0.5s;
+			cursor: pointer;
+			margin: 5px;
+		}
+		.btn1 span{
+			cursor: pointer;
+			display: inline-block;
+			position: relative;
+			transition: 0.5s;
+		}
+		.btn1 span:after{
+			content: '\00bb';
+			position: absolute;
+			opacity: 0;
+			top: 0;
+			right: -20px;
+			transition: 0.5s;
+		}
+		.btn1:hover span{
+			padding-right: 25px;
+		}
+		.btn1:hover span:after{
+			opacity: 1;
+			right: 0;
+		}
+
+		.btn2{
+			display: inline-block;
+			padding: 15px 25px;
+			font-size: 24px;
+			cursor:pointer;
+			text-align: center;
+			text-decoration: none;
+			outline: none;
+			color: #fff;
+			background-color: #4CAF50;
+			border: none;
+			border-radius: 15px;
+			box-shadow: 0 9px #999;
+		}
+		.btn2:hover{
+			background-color: #3e8e41;
+		}
+		.btn2:active{
+			background-color: #3e8e41;
+			box-shadow: 0 5px #666;
+			transform: translateY(4px);
+		}
+
+		.btn3{
+			background-color: #f4511e;
+			border: none;
+			color: white;
+			padding: 16px 32px;
+			text-align: center;
+			font-size: 16px;
+			margin: 4px 2px;
+			opacity: 0.6;
+			transition: 0.3s;
+			display: inline-block;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		.btn3:hover{
+			opacity: 1;
+		}
+
+		.btn4{
+			position: relative;
+			background-color: #4CAF50;
+			border: none;
+			font-size: 28px;
+			color: #FFFFFF;
+			padding: 20px;
+			width: 200px;
+			text-align: center;
+			transition-duration: 0.4s;
+			text-decoration: none;
+			overflow: hidden;
+			cursor: pointer; 
+		}
+		.btn4:after{
+			content: "";
+			background: #f1f1f1;
+			display: block;
+			position:absolute;
+			padding-top: 300%;
+			padding-left: 350%;
+			margin-left: -20px !important;
+			margin-top: -120px;
+			opacity: 0;
+			transition: all 0.8s;
+		}
+		.btn4:active:after{
+			padding: 0;
+			margin: 0;
+			opacity:1;
+			transition: 0s;  
+		}
+	</style>
+</head>
+<body>
+	<h2>Botões animados</h2>
+	<button class="btn1" style="vertical-align:middle;"><span>Hover </span></button>
+
+	<button class="btn2">Click me</button>
+
+	<button class="btn3">Hover Over Me</button>
+
+	<button class="btn4">Clique aqui!</button>
+</body>
+</html>

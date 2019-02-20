@@ -276,3 +276,9 @@ rotateX(angle)	Defines a 3D rotation along the X-axis
 rotateY(angle)	Defines a 3D rotation along the Y-axis
 rotateZ(angle)	Defines a 3D rotation along the Z-axis
 perspective(n)	Defines a perspective view for a 3D transformed element
+
+-> transition	A shorthand property for setting the four transition properties into a single property
+transition-delay	Specifies a delay (in seconds) for the transition effect
+transition-duration	Specifies how many seconds or milliseconds a transition effect takes to complete
+transition-property	Specifies the name of the CSS property the transition effect is for
+transition-timing-function	Specifies the speed curve of the transition effect

@@ -11,6 +11,7 @@
 			border-bottom: 1px dotted black;
 		}
 		.tooltip1 .tooltiptext1{
+
 			visibility: hidden;
 			width: 120px;
 			background-color: black;
@@ -40,11 +41,66 @@
 			top: 100%;
 			left: 50%;
 			margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
-			*/
 		}
 
 		.tooltip1:hover .tooltiptext1{
 			visibility: visible;
+		}
+
+		.tooltip2{
+			position: relative;
+			display: inline-block;
+			border-bottom: 1px dotted black;
+		}
+
+		.tooltip2 .tooltiptext2{
+			visibility: hidden;
+			width: 120px;
+			background-color: black;
+			color: #fff;
+			text-align: center;
+			border-radius: 6px;
+			padding: 5px 0;
+			position: absolute;
+			z-index: 1;
+			bottom: 150%;
+			left: 50%;
+			margin-left: -60px;
+			/*If you want to fade in the tooltip text when it is about to be visible, you can use the CSS transition property together with the opacity property, and go from being completely invisible to 100% visible, in a number of specified seconds (1 second in our example)*/
+			opacity: 0;
+			transition: opacity 2s;
+		}
+
+		.tooltip2 .tooltiptext2::after{
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			margin-left: -5px;
+			border-width: 5px;
+			border-style: solid; 
+			border-color: black transparent transparent transparent;
+			/*
+			*Top Arrow:
+			bottom:100%;
+			left:50%;
+			border-color: transparent transparent black transparent;
+
+			*Left Arrow:
+			top:50%;
+			right:100%;
+			border-color: transparent black transparent transparent;
+
+			*Right Arrow:
+			top: 50%;
+			left: 100%;
+			border-color: transparent transparent transparent black;
+		*/
+		}
+
+		.tooltip2:hover .tooltiptext2{
+			visibility: visible;
+			opacity: 1;
 		}
 	</style>
 </head>
@@ -61,6 +117,9 @@
 	</div>
 
 	<!-- To create an arrow that should appear from a specific side of the tooltip, add "empty" content after tooltip, with the pseudo-element class ::after together with the content property. The arrow itself is created using borders. This will make the tooltip look like a speech bubble. -->
-	
+	<div class="tooltip2">
+		Hover over me
+		<span class="tooltiptext2">Tooltip text</span>
+	</div>
 </body>
 </html>

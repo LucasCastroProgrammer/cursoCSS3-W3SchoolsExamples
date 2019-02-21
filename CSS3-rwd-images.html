@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>RWD - Imagens</title>
+	<style>
+		body{
+			background-repeat: no-repeat;
+			background-image: url('img_forest.jpg');
+		}
+		*{
+			box-sizing: border-box;
+		}
+		/*If the width property is set to a percentage and the height is set to "auto", the image will be responsive and scale up and down*/
+		/*If the max-width property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size*/
+		#one{
+			max-width: 100%;
+			height: auto;
+		}
+		#two{
+			width: 100%;
+			height: 400px;
+			background-image: url('img_forest.jpg');
+			background-repeat: no-repeat;
+			background-size: contain;
+			border: 1px solid red;
+		}
+		#three{
+			width: 100%;
+			height: 400px;
+			background-image: url('img_forest.jpg');
+			background-size: 100% 100%;
+			border: 1px solid red;
+		}
+		#four{
+			width: 100%;
+			height: 400px;
+			background-image: url('img_forest.jpg');
+			background-size: cover;
+			border: 1px solid red;
+		}
+		@media only screen and (min-width:400px){
+			body{
+				background-image: url('img_chania.jpg');
+			}
+		}
+	</style>
+</head>
+<body>
+	<img id="one" src="img_chania.jpg" width="460" height="345">
+
+	<!-- 1. If the background-size property is set to "contain", the background image will scale, and try to fit the content area. However, the image will keep its aspect ratio (the proportional relationship between the image's width and height) -->
+	<div id="two"></div>
+
+	<!-- 2. If the background-size property is set to "100% 100%", the background image will stretch to cover the entire content area. -->
+	<div id="three"></div>
+
+	<!-- 3. If the background-size property is set to "cover", the background image will scale to cover the entire content area. Notice that the "cover" value keeps the aspect ratio, and some part of the background image may be clipped. -->
+	<div id="four"></div>
+
+	<!-- The <picture> element works similar to the <video> and <audio> elements. You set up different sources, and the first source that fits the preferences is the one being used.
+	The srcset attribute is required, and defines the source of the image.
+
+	The media attribute is optional, and accepts the media queries you find in CSS @media rule.
+
+	You should also define an <img> element for browsers that do not support the <picture> element.
+	-->
+	<picture>
+		<source srcset="img_forest.jpg" media="(max-width: 400px)">
+		<source srcset="img_chania.jpg">]
+		<img src="img_chania.jpg" alt="Nature">	
+	</picture>
+</body>
+</html>

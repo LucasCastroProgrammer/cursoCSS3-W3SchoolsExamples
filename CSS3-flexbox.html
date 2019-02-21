@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Flexbox em CSS</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		.flex-container{
+			/*The flex container becomes flexible by setting the display property to flex*/
+			display: flex;
+			background-color: DodgerBlue;
+			height: 600px;
+			/*The column value stacks the flex items vertically (from top to bottom):
+			flex-direction: column;
+			*/
+			/*The column-reverse value stacks the flex items vertically (but from bottom to top):
+			flex-direction: column-reverse;
+			*/
+			/*The row value stacks the flex items horizontally (from left to right):*/
+			/*flex-direction: row;*/
+			/*The row-reverse value stacks the flex items horizontally (but from right to left).*/
+			
+			/*The flex-flow property is a shorthand property for setting both the flex-direction and flex-wrap properties.*/
+			flex-flow: row wrap;
+
+			/*The wrap value specifies that the flex items will wrap if necessary*/
+			/*flex-wrap: wrap;*/
+			/*The nowrap value specifies that the flex items will not wrap (this is default).
+			The wrap-reverse value specifies that the flexible items will wrap if necessary, in reverse order.*/
+
+			/*The flex-start value aligns the flex items at the beginning of the container (this is default).*/
+			/*The flex-end value aligns the flex items at the end of the container.*/
+			/*The justify-content property is used to align the flex items.*/
+			/*The space-around value displays the flex items with space before, between, and after the lines.*/
+			justify-content: center;
+
+			/*The flex-start value aligns the flex items at the top of the container.*/
+			/*The flex-end value aligns the flex items at the bottom of the container.*/
+			/*The align-items property is used to align the flex items vertically.*/
+			/*The stretch value stretches the flex items to fill the container (this is default).*/
+			/*The baseline value aligns the flex items such as their baselines aligns*/
+			align-items: center;
+
+			/*Set both the justify-content and align-items properties to center, and the flex item will be perfectly centered.*/
+
+			/*The align-content property is used to align the flex lines.*/
+			/*The space-between value displays the flex lines with equal space between them*/
+			/*The space-around value displays the flex lines with space before, between, and after them.*/
+			/*The stretch value stretches the flex lines to take up the remaining space (this is default).*/
+			/*The center value displays display the flex lines in the middle of the container*/
+			/*The flex-start value displays the flex lines at the start of the container.*/
+			/*The flex-end value displays the flex lines at the end of the container.*/
+			align-content: flex-start;
+		}
+
+		/*The flex property is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties.
+		<div style="flex: 0 0 200px">3</div>*/
+
+		.flex-container > div{
+			background-color: #f1f1f1;
+			width: 100px;
+			margin: 10px;
+			text-align: center;
+			padding: 20px;
+			font-size: 30px;
+			line-height: 75px;
+		}
+	</style>
+</head>
+<body>
+	<!-- Before the Flexbox Layout module, there were four layout modes:
+
+	Block, for sections in a webpage
+	Inline, for text
+	Table, for two-dimensional table data
+	Positioned, for explicit position of an element
+	The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning. -->
+
+	<!-- To start using the Flexbox model, you need to first define a flex container. -->
+	<!-- The direct child elements of a flex container automatically becomes flexible (flex) items. -->
+	<div class="flex-container">
+		<!-- The order property specifies the order of the flex items. -->
+		<div style="order: 3">1</div>
+		<div style="order: 2">2</div>
+		<div style="order: 4">3</div>
+		<div style="order: 1">4</div>
+		<!-- The flex-grow property specifies how much a flex item will grow relative to the rest of the flex items. -->
+		<div style="flex-grow: 1;">5</div>
+		<div style="flex-grow: 8">6</div>
+		<!-- The flex-shrink property specifies how much a flex item will shrink relative to the rest of the flex items. -->
+		<!-- The align-self property specifies the alignment for the selected item inside the flexible container.
+		The align-self property overrides the default alignment set by the container's align-items property. -->
+		<div style="flex-shrink: 0;align-self: center;">7</div>
+		<!-- The flex-basis property specifies the initial length of a flex item. -->
+		<div style="flex-basis: 200px;">8</div>
+	</div>
+
+	<!-- The flex-wrap property specifies whether the flex items should wrap or not.
+
+	The examples below have 12 flex items, to better demonstrate the flex-wrap property. -->
+</body>
+</html>

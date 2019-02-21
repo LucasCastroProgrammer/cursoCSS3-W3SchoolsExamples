@@ -283,7 +283,7 @@ transition-duration	Specifies how many seconds or milliseconds a transition effe
 transition-property	Specifies the name of the CSS property the transition effect is for
 transition-timing-function	Specifies the speed curve of the transition effect
 
--> Prorpiedades de animação em CSS:
+-> Propriedades de animação em CSS:
 @keyframes	Specifies the animation code
 animation	A shorthand property for setting all the animation properties
 animation-delay	Specifies a delay for the start of an animation
@@ -306,3 +306,7 @@ column-rule-width	Specifies the width of the rule between columns
 column-span	Specifies how many columns an element should span across
 column-width	Specifies a suggested, optimal width for the columns
 columns	A shorthand property for setting column-width and column-count
+
+-> Propriedades de interface de usuário em CSS:
+outline-offset	Adds space between an outline and the edge or border of an element
+resize	Specifies whether or not an element is resizable by the user

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Exemplos de paginação em CSS</title>
+	<style>
+		.one{
+			display: inline-block;
+		}
+		.one a{
+			color: black;
+			float: left;
+			padding: 8px 16px;
+			text-decoration: none;
+			transition: background-color .3s;
+			border: 1px solid #ddd;
+			margin: 0 4px;
+			font-size: 22px;
+		}
+		.one a.active{
+			background-color: #4CAF50;
+			color: white;
+			border-radius: 5px;
+		}
+		.one a:hover:not(.active){
+			background-color: #ddd;
+			border-radius: 5px;
+		}
+		.one a:first-child{
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+		.one a:last-child{
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+		.center{
+			text-align: center;
+		}
+		.two{
+			display: inline-block;
+		}
+		.two a{
+			color: black;
+			float: left;
+			padding: 8px 16px;
+			text-decoration: none;
+			transition: background-color .3s;
+			border: 1px solid #ddd;
+		}
+		.two a.active2{
+			background-color: #4CAF50;
+			color: white;
+			border: 1px solid #4ACF50;
+		}
+		.two a:hover:not(.active2){
+			background-color: #ddd;
+		}
+
+		ul.breadcrumb{
+			padding: 8px 16px;
+			list-style: none;
+			background-color: #eee;
+		}
+
+		ul.breadcrumb li{
+			display: inline;
+		}
+
+		ul.breadcrumb li+li:before{
+			padding: 8px;
+			color: black;
+			content: "/\00a0";
+		}
+		ul.breadcrumb li a{
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	<!-- If you have a website with lots of pages, you may wish to add some sort of pagination to each page. -->
+	<h2>Paginação simples</h2>
+	<div class="center">
+		<div class="one">
+			<a href="#">&laquo</a>
+			<a href="#" class="active">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">4</a>
+			<a href="#">5</a>
+			<a href="#">6</a>
+			<a href="#">&raquo</a>
+		</div>
+	</div>
+
+	<!-- Highlight the current page with an .active class, and use the :hover selector to change the color of each page link when moving the mouse over them -->
+
+	<!-- Add the border-radius property if you want a rounded "active" and "hover" button. -->
+
+	<!-- Add the transition property to the page links to create a transition effect on hover. -->
+
+	<!-- Use the border property to add borders to the pagination. -->
+
+	<!-- Add rounded borders to your first and last link in the pagination. -->
+
+	<!-- Add the margin property if you do not want to group the page links. -->
+
+	<!-- Change the size of the pagination with the font-size property. -->
+	<p>Next/Previous buttons</p>
+	<div class="two">
+		<a href="#"><</a>
+		<a href="#">></a>
+	</div>
+
+	<p>Navegação de página</p>
+	<div class="two">
+		<a href="#" class="active2">Home</a>
+		<a href="#">Link 1</a>
+		<a href="#">Link 2</a>
+		<a href="#">Link 3</a>
+	</div>
+
+	<h2>Breadcrumb Pagination</h2>
+	<ul class="breadcrumb">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Pictures</a></li>
+		<li><a href="#">Summer 15</a></li>
+		<li><a href="#">Italy</a></li>
+	</ul>
+</body>
+</html>

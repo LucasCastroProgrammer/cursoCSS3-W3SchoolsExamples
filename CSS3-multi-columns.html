@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initials-scale=1">
+	<title>Colunas múltiplas em CSS</title>
+	<style>
+		.one{
+			/* The column-count property specifies the number of columns an element should be divided into. */
+			-webkit-column-count: 3;
+		    -moz-column-count: 3;
+			column-count: 3;
+			/* The column-gap property specifies the gap between the columns. */		
+			-webkit-column-gap: 40px;
+			-moz-column-gap: 40px;
+			column-gap: 40px;
+			/* The column-rule-style property specifies the style of the rule between columns. */		
+			-webkit-column-rule-style: solid;
+			-moz-column-rule-style: solid;
+			column-rule-style: solid;
+			/* The column-rule-width property specifies the width of the rule between columns. */		
+			-webkit-column-rule-width: 1px;
+			-moz-column-rule-width: 1px;
+			column-rule-width: 1px;	
+			/*The column-rule-color property specifies the color of the rule between columns*/
+			-webkit-column-rule-color: lightblue;
+			-moz-column-rule-color: lightblue;
+			column-rule-color: lightblue;
+			/*The column-rule property is a shorthand property for setting all the column-rule-* properties above.*/
+			-webkit-column-rule: 1px solid lightblue;
+			-moz-column-rule: 1px solid lightblue;
+			column-rule: 1px solid lightblue;
+			/*The column-width property specifies a suggested, optimal width for the columns.*/
+			-webkit-column-width: 100px;
+			-moz-column-width: 100px;
+			column-width: 100px;
+		}
+		h2{
+			/*The column-span property specifies how many columns an element should span across.*/
+			-webkit-column-span: all;
+			column-span: all;
+		}
+	</style>
+</head>
+<body>
+	<div class="one">
+		<h2>Lorem Ipsum Dolor Sit Amet</h2>
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+	</div>
+</body>
+</html>

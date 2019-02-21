@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initials-scale=1">
+	<title>User-Interface em CSS</title>
+	<style>
+		.one{
+			border: 2px solid;
+			padding: 20px;
+			width: 300px;
+			resize: horizontal; /*Pode-se usar vertical, both(mudar width e height) or none(não deixar redimensionar) também*/
+			overflow: auto;
+		}
+		div.ex1{
+			margin: 20px;
+			border: 1px solid black;
+			outline: 4px solid red;
+			outline-offset: 15px;
+		}
+		div.ex2{
+			margin: 10px;
+			border: 1px solid black;
+			outline: 5px dashed blue;
+			outline-offset: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="one">
+		<p>Let the user resize only the width of this div element.</p>
+  		<p>To resize: Click and drag the bottom right corner of this div element.</p>
+	</div>
+
+	<!-- The outline-offset property adds space between an outline and the edge or border of an element.
+
+	Outlines differ from borders in three ways:
+
+	An outline is a line drawn around elements, outside the border edge
+	An outline does not take up space -->
+	<div class="ex1">
+		This div has a 4 pixels solid red outline 15 pixels outside the border edge.
+	</div>
+	<div class="ex2">
+		This div has a 5 pixels dashed blue outline 5 pixels outside the border edge.
+	</div>
+</body>
+</html>

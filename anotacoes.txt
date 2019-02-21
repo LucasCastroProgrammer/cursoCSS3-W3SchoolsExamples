@@ -310,3 +310,6 @@ columns	A shorthand property for setting column-width and column-count
 -> Propriedades de interface de usuário em CSS:
 outline-offset	Adds space between an outline and the edge or border of an element
 resize	Specifies whether or not an element is resizable by the user
+
+-> Função var em CSS:
+var()	Inserts the value of a custom property

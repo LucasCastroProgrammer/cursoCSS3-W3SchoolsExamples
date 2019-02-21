@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Módulo de Grid Layout</title>
+	<style>
+		.grid-container{
+			display: grid;/*Pode-se usar inline-grid também*/
+			grid-column-gap: 50px;
+			grid-row-gap: 50px;
+			/*The grid-template-rows property defines the height of each row.*/
+			grid-template-rows: 80px 200px ;
+			/*The grid-template-columns property defines the number of columns in your grid layout, and it can define the width of each column.
+
+			The value is a space-separated-list, where each value defines the length of the respective column.
+
+			If you want your grid layout to contain 4 columns, specify the width of the 4 columns, or "auto" if all columns should have the same width.*/
+			grid-template-columns: auto auto auto;
+			background-color: #2196F3;
+			padding: 10px;
+			/*grid-gap: 50px; seta pra row e column gap*/
+			/*grid-gap: 50px 100px; seta o primeiro valor para column e depois para row.*/
+			/*The justify-content property is used to align the whole grid inside the container.*/
+			justify-content: space-evenly;
+			/*Pode-se usar também: space-around, space-between, center, start, end*/
+
+			/*The align-content property is used to vertically align the whole grid inside the container.*/
+			align-content: center;
+			/*Pode-se usar também space-evenly, space-around, space-between, start, end*/
+		}
+		.grid-item{
+			background-color: rgba(255,255,255,0.8);
+			border: 1px solid rgba(0,0,0,0.8);
+			padding: 20px;
+			font-size: 30px;
+			text-align: center;
+		}
+		/*
+		.item1{
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}*/
+	</style>
+</head>
+<body>
+	<!-- The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning. -->
+	<!-- A grid layout consists of a parent element, with one or more child elements. -->
+	<h2>Elementos Grid</h2>
+	<div class="grid-container">
+		<div class="grid-item item1">1</div>
+		<div class="grid-item item2">2</div>
+		<div class="grid-item item3">3</div>
+		<div class="grid-item item4">4</div>
+		<div class="grid-item item5">5</div>
+		<div class="grid-item item6">6</div>
+		<div class="grid-item item7">7</div>
+		<div class="grid-item item8">8</div>
+		<div class="grid-item item9">9</div>
+	</div>
+
+	<!-- To make an HTML element behave as a grid container, you have to set the display property to grid or inline-grid.
+
+	Grid containers consist of grid items, placed inside columns and rows. -->
+
+</body>
+</html>

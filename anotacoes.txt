@@ -313,3 +313,6 @@ resize	Specifies whether or not an element is resizable by the user
 
 -> Função var em CSS:
 var()	Inserts the value of a custom property
+
+-> Propriedade box-sizing em CSS:
+box-sizing	Defines how the width and height of an element are calculated: should they include padding and borders, or not.
